@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_prinsipal_channel,Prinsipal Channel,model_prinsipal_channel,,1,1,1,1
+access_prinsipal_pajak,Prinsipal Pajak,model_prinsipal_pajak,,1,1,1,1
+access_prinsipal_rekening,Prinsipal Rekening,model_prinsipal_rekening,,1,1,1,1
+access_prinsipal_program_diskon_barang,Prinsipal Program Diskon Barang,model_prinsipal_program_diskon_barang,,1,1,1,1

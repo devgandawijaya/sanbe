@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- Main menu -->
+        <menuitem id="portal_data_root_menu" name="Portal BSP" sequence="78" web_icon="portal_report_bsp/static/description/portal_bis_icon.png"/>
+
+        <!-- Submenus -->
+        <menuitem id="main_menu_data_dasboard" name="Dashboard" parent="portal_data_root_menu" action="action_portal_data_dasboard" sequence="1"/>
+        <menuitem id="main_menu_data_pivot" name="BIS Pivot" parent="portal_data_root_menu" sequence="3"/>
+        <menuitem id="main_menu_mrp_pivot" name="MRP Pivot" parent="portal_data_root_menu" sequence="5"/>
+        <!-- <menuitem id="main_menu_report" name="Konsolidasi" parent="portal_data_root_menu" sequence="10"/> -->
+        <menuitem id="main_menu_pharmacy_report" name="Pharmacy Report" parent="portal_data_root_menu" sequence="12"/>
+        <menuitem id="main_menu_cp_report" name="CP Report" parent="portal_data_root_menu" sequence="13"/>
+        <menuitem id="main_menu_konfigurasi" name="Konfigurasi" parent="portal_data_root_menu" sequence="15"/>
+
+
+        <!-- data pivot -->
+        <!-- <menuitem id="main_menu_data_replacing" name="Replacing" parent="main_menu_data_pivot" action="action_redirect_to_import_data_replacing" sequence="1"/> -->
+        <menuitem id="main_menu_data_replacing" name="Replacing" parent="main_menu_data_pivot" action="action_portal_data_replacing" sequence="1"/>
+        <menuitem id="main_menu_barang_datang" name="Barang Datang" parent="main_menu_data_pivot" action="action_portal_barang_datang" sequence="10"/>
+        <menuitem id="main_menu_daily_stock" name="Daily Stock" parent="main_menu_data_pivot" action="action_portal_daily_stock" sequence="15"/>
+        <menuitem id="main_menu_konsolidasi_master" name="Konsolidasi Master" parent="main_menu_data_pivot" action="action_portal_konsolidasi_master" sequence="20"/>
+
+
+        <!-- mrp pivot -->
+        <menuitem id="main_menu_mrp_bpb" name="BPB" parent="main_menu_mrp_pivot" action="action_portal_mrp_bpb" sequence="1"/>
+        <menuitem id="main_menu_mrp_sla" name="SLA" parent="main_menu_mrp_pivot" action="action_portal_mrp_sla" sequence="5"/>
+        <menuitem id="main_menu_mrp_mo" name="MO" parent="main_menu_mrp_pivot" action="action_portal_mrp_mo" sequence="10"/>
+
+        <!-- report -->
+        <!-- <menuitem id="main_menu_report_rumus_logistik" name="Report Rumus Logistik" parent="main_menu_report" action="action_portal_report_rumus_logistik" sequence="1"/> -->
+        
+        <!-- pharmacy_report -->
+        <menuitem id="main_menu_data_replacing_report" name="Replacing Report" parent="main_menu_pharmacy_report" action="action_redirect_to_import_data_replacing"  sequence="1"/>
+        <menuitem id="main_menu_data_sales_perdivisi_report" name="Data Sales Per Divisi" parent="main_menu_pharmacy_report" action="action_redirect_to_import_data_replacing"  sequence="5"/>
+        <menuitem id="main_menu_data_sales_perqty_report" name="Data Sales Per Qty" parent="main_menu_pharmacy_report" action="action_redirect_to_import_data_replacing"  sequence="10"/>
+        <menuitem id="main_menu_data_sales_obathewan_report" name="Data Sales Obat Hewan" parent="main_menu_pharmacy_report" action="action_redirect_to_import_data_replacing"  sequence="20"/>
+        <menuitem id="main_menu_data_sales_ratiokategori_report" name="Stock Ratio Per Kategori" parent="main_menu_pharmacy_report" action="action_redirect_to_import_data_replacing"  sequence="25"/>
+        <menuitem id="main_menu_data_sales_ratiopending_report" name="Stock Ratio Pending" parent="main_menu_pharmacy_report" action="action_redirect_to_import_data_replacing"  sequence="30"/>
+        <menuitem id="main_menu_data_sales_analisatransporter_report" name="Stock Analisa Transporter" parent="main_menu_pharmacy_report" action="action_redirect_to_import_data_replacing"  sequence="35"/>
+
+        <menuitem id="main_menu_data_cp_report" name="cp Report" parent="main_menu_cp_report" action="action_redirect_to_import_data_replacing"  sequence="1"/>
+        <menuitem id="main_menu_data_pivot_sales" name="Pivot Sales" parent="main_menu_cp_report" action="action_pivot_sales"  sequence="5"/>
+        <menuitem id="main_menu_data_cp_stock" name="Pivot Stock" parent="main_menu_cp_report" action="action_pivot_stock"  sequence="10"/>
+        
+        <!-- konfigurasi -->
+        <menuitem id="main_menu_crud_server_env" name="Master List Server" parent="main_menu_konfigurasi" action="action_portal_crud_server_env" sequence="1"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <menuitem id="menu_prinsipal_channel"
+            name="Vendor Channel"
+            parent="purchase.menu_procurement_management"
+            action="action_redirect_to_import_prinsipal_channel" 
+            sequence="15"/>
+
+        <menuitem id="menu_prinsipal_pajak"
+            name="Vendor Pajak"
+            parent="purchase.menu_procurement_management"
+            action="action_redirect_to_import_prinsipal_pajak" 
+            sequence="20"/>
+
+        <menuitem id="menu_prinsipal_rekening"
+            name="Vendor Rekening"
+            parent="purchase.menu_procurement_management"
+            action="action_redirect_to_import_prinsipal_rekening" 
+            sequence="25"/>
+
+        <menuitem id="menu_prinsipal_program_diskon_barang"
+            name="Vendor Program Diskon Barang"
+            parent="purchase.menu_procurement_management"
+            action="action_prinsipal_program_diskon_barang" 
+            sequence="30"/>
+        
+    
+    </data>
+    
+</odoo>

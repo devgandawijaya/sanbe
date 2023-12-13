@@ -1,0 +1,68 @@
+<odoo>
+  <data>
+    <record id="inherit_product_template_product_form" model="ir.ui.view">
+      <field name="name">product.template.product.form.inherit</field>
+      <field name="model">product.template</field>
+      <field name="inherit_id" ref="product.product_template_form_view"/>
+      <field name="arch" type="xml">
+        <xpath expr="//group[@name='group_general']" position="attributes">
+          <attribute name="invisible">1</attribute>
+        </xpath>
+        <xpath expr="//group[@name='group_standard_price']" position="attributes">
+          <attribute name="invisible">1</attribute>
+        </xpath>
+        <xpath expr="//page/group/group[@name='group_standard_price']" position="after">
+          <!-- <group name="group_master"> -->
+            <group name="group_master_code" string="Kode">
+              <field name="kode_barang"/>
+              <field name="kode_kelompok_barang"/>
+              <field name="kode_divisi_produk_id"/>
+              <field name="kode_barang_dinkes_id"/>
+              <field name="kode_register_obat_id"/>
+              <field name="kode_kategori_barang"/>
+            </group>
+            <group name="group_master_name" string="Name">
+              <field name="nama_kelompok_barang_id"/>
+              <field name="nama_divisi_produk"/>
+              <field name="nama_kategori_id"/>
+              <field name="nama_barang" invisible="1"/>
+            </group>
+            
+          <!-- </group>
+          <group name="master_group"> -->
+            <group name="group_master_harga" string="Harga">
+              <field name="harga_jual"/>
+              <field name="harga_beli"/>
+              <field name="harga_tac"/>
+              <field name="harga_spreading"/>
+            </group>
+            <group name="group_master_tanggal" string="Additional">
+              <field name="tanggal_discontinue"/>
+              <field name="std_lead_time"/>
+              <field name="pengali"/>
+              <field name="tempo"/>
+              <field name="purchasing_level"/>
+              <field name="karyawan_id"/>
+              <field name="time_stamp"/>
+              <field name="currency_id" invisible="1"/>
+              <field name="is_directly_updated" invisible="1"/>
+            </group>
+          <!-- </group> -->
+          
+          
+        </xpath>
+      </field>
+    </record>
+
+    <record id="product_template_inherited_kanban_view" model="ir.ui.view">
+      <field name="name">product.template.view.kanban.inherit</field>
+      <field name="model">product.template</field>
+      <field name="inherit_id" ref="product.product_template_kanban_view"/>
+      <field name="arch" type="xml">
+        <xpath expr="//kanban" position="attributes">
+          <attribute name="js_class">button_product_master_list</attribute>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>

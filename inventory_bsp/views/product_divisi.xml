@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="product_divisi_form" model="ir.ui.view">
+            <field name="name">product.divisi.form</field>
+            <field name="model">product.divisi</field>
+            <field name="arch" type="xml">
+                <form string="Product divisi">
+                    <sheet>
+                        <group>
+                            <field name="kode_divisi_produk"/>
+                            <field name="partner_id"/>
+                            <field name="kode_prinsipal"/>
+                            <field name="nama_divisi_produk"/>
+                            <field name="na_divisi_produk"/>
+                            <field name="karyawan_id"/>
+                            <field name="exclusive"/>
+                            <field name="vaccine"/>
+                            <field name="time_stime"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="product_divisi_tree" model="ir.ui.view">
+            <field name="name">product.divisi.tree</field>
+            <field name="model">product.divisi</field>
+            <field name="arch" type="xml">
+                <tree string="Product divisi" js_class="button_product_divisi_list">
+                    <field name="kode_divisi_produk"/>
+                    <field name="kode_prinsipal"/>
+                    <field name="nama_divisi_produk"/>
+                    <field name="na_divisi_produk"/>
+                    <field name="karyawan_id"/>
+                    <field name="exclusive"/>
+                    <field name="vaccine"/>
+                    <field name="time_stime"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,319 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="action_portal_data_replacing" model="ir.actions.act_window">
+            <field name="name">Data Replacing</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">data.replacing</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No Data Replacing
+                </p>
+                <p>
+                    Create new Data Replacing.
+                </p>
+            </field>
+        </record>
+
+
+        <record id="action_pivot_sales" model="ir.actions.act_window">
+            <field name="name">Pivot Sales</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">pivot.sales</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No Data Pivot Sales
+                </p>
+                <p>
+                    Create new pivot sales.
+                </p>
+            </field>
+        </record>
+
+
+        <record id="action_redirect_to_import_pivot_sales" model="ir.actions.server">
+            <field name="name">Redirect to Import Pivot Sales</field>
+            <field name="model_id" ref="model_pivot_sales"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                    'type': 'ir.actions.act_url',
+                    'url': '/pivot-sales-import',
+                    'target': 'self',
+                }
+            </field>
+        </record>
+
+        <record id="action_pivot_stock" model="ir.actions.act_window">
+            <field name="name">Pivot Stock</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">pivot.stock</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No Data Pivot stock
+                </p>
+                <p>
+                    Create new pivot stock.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_export_excel_pivot_stock" model="ir.actions.server">
+            <field name="name">Export Excel Pivot Stock</field>
+            <field name="model_id" ref="model_pivot_stock"/>
+            <field name="binding_model_id" ref="model_pivot_stock"/>
+            <field name="binding_view_types">list</field>
+            <field name="state">code</field>
+            <field name="code">
+                action = records.action_export_excel_pivot_stock()
+            </field>
+        </record>
+
+
+        <record id="action_redirect_to_import_data_replacing" model="ir.actions.server">
+            <field name="name">Redirect to Import Replacing</field>
+            <field name="model_id" ref="model_data_replacing"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                    'type': 'ir.actions.act_url',
+                    'url': '/get_json_responses',
+                    'target': 'self',
+                }
+            </field>
+        </record>
+
+        <record id="action_export_pdf" model="ir.actions.server">
+            <field name="name">Export PDF</field>
+            <field name="model_id" ref="model_data_replacing"/>
+            <field name="binding_model_id" ref="model_data_replacing"/>
+            <field name="binding_view_types">list</field>
+            <field name="state">code</field>
+            <field name="code">
+                action = records.action_export_pdf()
+            </field>
+        </record>
+
+
+
+        <record id="action_portal_barang_datang" model="ir.actions.act_window">
+            <field name="name">Barang Datang</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">barang.datang</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No Barang Datang
+                </p>
+                <p>
+                    Create new Barang Datang.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_redirect_to_import_barang_datang" model="ir.actions.server">
+            <field name="name">Redirect to Barang Datang</field>
+            <field name="model_id" ref="model_barang_datang"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                    'type': 'ir.actions.act_url',
+                    'url': '/get_json_responses_barang_datang',
+                    'target': 'self',
+                }
+            </field>
+        </record>
+
+        <record id="action_redirect_to_import_daily_stock" model="ir.actions.server">
+            <field name="name">Redirect to Daily Stock</field>
+            <field name="model_id" ref="model_barang_datang"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                    'type': 'ir.actions.act_url',
+                    'url': '/get_json_responses_daily_stock',
+                    'target': 'self',
+                }
+            </field>
+        </record>
+
+        <record id="action_portal_crud_server_env" model="ir.actions.act_window">
+            <field name="name">Server List</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">crud.server.env</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No CRUD Serve Env
+                </p>
+                <p>
+                    Create new CRUD Serve Env.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_portal_daily_stock" model="ir.actions.act_window">
+            <field name="name">Daily Stock</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">daily.stock</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No Daily Stock
+                </p>
+                <p>
+                    Create new Daily Stock.
+                </p>
+            </field>
+        </record>
+
+
+
+        <record id="action_portal_data_dasboard" model="ir.actions.act_window">
+            <field name="name">Data Dasboard</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">data.dasboard</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No Data Dasboard
+                </p>
+                <p>
+                    Create new Data Dasboard.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_portal_report_rumus_logistik" model="ir.actions.act_window">
+            <field name="name">Report Rumus Logistik</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">report.rumus.logistik</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No Report Rumus Logistik
+                </p>
+                <p>
+                    Create new Report Rumus Logistik.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_portal_mrp_bpb" model="ir.actions.act_window">
+            <field name="name">BPB</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mrp.bpb</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No Report BPB
+                </p>
+                <p>
+                    Create new Report BPB.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_redirect_to_import_mrp_bpb" model="ir.actions.server">
+            <field name="name">Redirect to Import MRP BPB</field>
+            <field name="model_id" ref="model_mrp_bpb"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                    'type': 'ir.actions.act_url',
+                    'url': '/mrp/bpb',
+                    'target': 'self',
+                }
+            </field>
+        </record>
+
+        <record id="action_portal_mrp_sla" model="ir.actions.act_window">
+            <field name="name">SLA</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mrp.sla</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No Report SLA
+                </p>
+                <p>
+                    Create new Report SLA.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_redirect_to_import_mrp_sla" model="ir.actions.server">
+            <field name="name">Redirect to Import MRP SLA</field>
+            <field name="model_id" ref="model_mrp_sla"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                    'type': 'ir.actions.act_url',
+                    'url': '/mrp/sla',
+                    'target': 'self',
+                }
+            </field>
+        </record>
+
+        <record id="action_portal_mrp_mo" model="ir.actions.act_window">
+            <field name="name">MO</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mrp.mo</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No Report MO
+                </p>
+                <p>
+                    Create new Report MO.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_redirect_to_import_mrp_mo" model="ir.actions.server">
+            <field name="name">Redirect to Import MRP MO</field>
+            <field name="model_id" ref="model_mrp_mo"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                    'type': 'ir.actions.act_url',
+                    'url': '/mrp/mo',
+                    'target': 'self',
+                }
+            </field>
+        </record>
+
+        <record id="action_portal_konsolidasi_master" model="ir.actions.act_window">
+            <field name="name">Konsolidasi Master</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">konsolidasi.master</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No Report Konsolidasi Master
+                </p>
+                <p>
+                    Create new Report Konsolidasi Master.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_redirect_to_import_konsolidasi_master" model="ir.actions.server">
+            <field name="name">Redirect to Import MRP Konsolidasi Master</field>
+            <field name="model_id" ref="model_konsolidasi_master"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                    'type': 'ir.actions.act_url',
+                    'url': '/import/konsolidasi',
+                    'target': 'self',
+                }
+            </field>
+        </record>
+    
+    </data>
+    
+</odoo>

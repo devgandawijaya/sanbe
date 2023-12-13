@@ -1,0 +1,454 @@
+{
+	"info": {
+		"_postman_id": "2d70fd01-987f-4bc4-b396-2f4bf7ef94f9",
+		"name": "BSP Microservice Internal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1429994"
+	},
+	"item": [
+		{
+			"name": "Produk",
+			"item": [
+				{
+					"name": "Produk",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/microservicelayerinternal/produk/produk/index?page=1&per_page=100",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"microservicelayerinternal",
+								"produk",
+								"produk",
+								"index"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Produk Kategori",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/microservicelayerinternal/produk/produk/geKategoriProduk/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"microservicelayerinternal",
+								"produk",
+								"produk",
+								"geKategoriProduk",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "produk Kelompok",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/microservicelayerinternal/produk/produk/getKelompokProduk/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"microservicelayerinternal",
+								"produk",
+								"produk",
+								"getKelompokProduk",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "produk PPN",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/microservicelayerinternal/produk/produk/getPpnProduk/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"microservicelayerinternal",
+								"produk",
+								"produk",
+								"getPpnProduk",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "produk Divisi",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/microservicelayerinternal/produk/produk/getDivisiProduk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"microservicelayerinternal",
+								"produk",
+								"produk",
+								"getDivisiProduk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "produk Harga Barang Satuan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/microservicelayerinternal/produk/produk/getHargaBarangSatuan?page=1&per_page=1000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"microservicelayerinternal",
+								"produk",
+								"produk",
+								"getHargaBarangSatuan"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "1000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Produk Simpan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"kode_barang\":\"Contoh-10001\",\r\n    \"kode_kelompok_barang\":\"C7\",\r\n    \"kode_divisi_produk\":\"3MI\",\r\n    \"kode_barang_dinkes\":\"\",\r\n    \"kode_register_obat\":\"\",\r\n    \"kode_kategori_barang\":\"NFOOD\",\r\n    \"nama_barang\":\"Contoh ID-72 ABSORPTION MOP SET 12'S\",\r\n    \"harga_jual\":\"46850\",\r\n    \"harga_beli\":\"40853\",\r\n    \"harga_tac\":\"40853\",\r\n    \"harga_spreading\":0,\r\n    \"tanggal_discontinue\":\"2012-09-28 14:13:19\",\r\n    \"std_lead_time\":0,\r\n    \"pengali\":0,\r\n    \"tempo\":\"3\",\r\n    \"purchasing_level\":\"TIDAK\",\r\n    \"id_karyawan\":\"arni\",\r\n    \"time_stamp\":\"2012-09-28 14:13:19\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.16.130/microservice_internal/produk/produk/addProduk",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"16",
+								"130"
+							],
+							"path": [
+								"microservice_internal",
+								"produk",
+								"produk",
+								"addProduk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PRODUK DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"kode_barang\":\"Contoh-10001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/microservicelayerinternal/produk/produk/deleteProduk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"microservicelayerinternal",
+								"produk",
+								"produk",
+								"deleteProduk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Produk Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"kode_barang\":\"Contoh-10001\",\r\n    \"kode_kelompok_barang\":\"C7\",\r\n    \"kode_divisi_produk\":\"3MI\",\r\n    \"kode_barang_dinkes\":\"\",\r\n    \"kode_register_obat\":\"\",\r\n    \"kode_kategori_barang\":\"NFOOD\",\r\n    \"nama_barang\":\"Contoh bOSS\",\r\n    \"harga_jual\":\"46850\",\r\n    \"harga_beli\":\"40853\",\r\n    \"harga_tac\":\"40853\",\r\n    \"harga_spreading\":\"\",\r\n    \"tanggal_discontinue\":\"2012-09-28 14:13:19\",\r\n    \"std_lead_time\":\"\",\r\n    \"pengali\":\"\",\r\n    \"tempo\":\"3\",\r\n    \"purchasing_level\":\"TIDAK\",\r\n    \"id_karyawan\":\"arni\",\r\n    \"time_stamp\":\"2012-09-28 14:13:19\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/microservicelayerinternal/produk/produk/updateProduk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"microservicelayerinternal",
+								"produk",
+								"produk",
+								"updateProduk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "produk Harga Barang Cabang",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/microservicelayerinternal/produk/produk/getHargaBarangCabang?page=1&per_page=5000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"microservicelayerinternal",
+								"produk",
+								"produk",
+								"getHargaBarangCabang"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "5000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "produk Harga Barang Outlet",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/microservicelayerinternal/produk/produk/getHargaBarangOutlet?page=1&per_page=5000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"microservicelayerinternal",
+								"produk",
+								"produk",
+								"getHargaBarangOutlet"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "5000"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Prinsipal",
+			"item": [
+				{
+					"name": "Prinsipal Chanel",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/microservicelayerinternal/produk/prinsipal/getPrinsipalChanel",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"microservicelayerinternal",
+								"produk",
+								"prinsipal",
+								"getPrinsipalChanel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Prinsipal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/microservicelayerinternal/produk/Prinsipal/index?page=1&per_page=100",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"microservicelayerinternal",
+								"produk",
+								"Prinsipal",
+								"index"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Prinsipal pajak",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/microservicelayerinternal/produk/Prinsipal/getPrinsipalPajak",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"microservicelayerinternal",
+								"produk",
+								"Prinsipal",
+								"getPrinsipalPajak"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Prinsipal Rekening",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/microservicelayerinternal/produk/prinsipal/getPrinsipalBank",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"microservicelayerinternal",
+								"produk",
+								"prinsipal",
+								"getPrinsipalBank"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cabang",
+			"item": [
+				{
+					"name": "Cabang",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/microservicelayerinternal/produk/Prinsipal/getCabang?page=1&per_page=5000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"microservicelayerinternal",
+								"produk",
+								"Prinsipal",
+								"getCabang"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "5000"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

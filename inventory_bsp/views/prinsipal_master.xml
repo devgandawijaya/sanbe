@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="prinsipal_master_form" model="ir.ui.view">
+            <field name="name">prinsipal.master.form</field>
+            <field name="model">prinsipal.master</field>
+            <field name="arch" type="xml">
+                <form string="Prisipal Master">
+                    <sheet>
+                        <group>
+                            <field name="kode_principal"/>
+                            <field name="nama_principal"/>
+                            <field name="cp_logistik"/>
+                            <field name="cp_finance"/>
+                            <field name="cp_marketing"/>
+                            <field name="tlp_principal"/>
+                            <field name="fax_principal"/>
+                            <field name="alamat_principal"/>
+                            <field name="email_principal"/>
+                            <field name="npwp_principal"/>
+                            <field name="tanggal_bergabung"/>
+                            <field name="tanggal_berhenti"/>
+                            <field name="jenis_pengembalian"/>
+                            <field name="percent_pembulatan"/>
+                            <field name="disonfaktur"/>
+                            <field name="faktur_eklusif"/>
+                            <field name="eklusif_awal"/>
+                            <field name="eklusif_akhir"/>
+                            <field name="nama_bm"/>
+                            <field name="id_karyawan"/>
+                            <field name="time_stamp"/>
+                            <field name="harga_acuan"/>
+                            <field name="nomor_nppkp"/>
+                            <field name="tgl_pkp"/>
+                            <field name="mata_uang"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="prinsipal_master_tree" model="ir.ui.view">
+            <field name="name">prinsipal.master.tree</field>
+            <field name="model">prinsipal.master</field>
+            <field name="arch" type="xml">
+                <tree string="Prisipal Master">
+                    <field name="kode_principal"/>
+                    <field name="nama_principal"/>
+                    <field name="cp_logistik"/>
+                    <field name="cp_finance"/>
+                    <field name="cp_marketing"/>
+                    <field name="tlp_principal"/>
+                    <field name="fax_principal"/>
+                    <field name="alamat_principal"/>
+                    <field name="email_principal"/>
+                    <field name="npwp_principal"/>
+                    <field name="tanggal_bergabung"/>
+                    <field name="tanggal_berhenti"/>
+                    <field name="jenis_pengembalian"/>
+                    <field name="percent_pembulatan"/>
+                    <field name="disonfaktur"/>
+                    <field name="faktur_eklusif"/>
+                    <field name="eklusif_awal"/>
+                    <field name="eklusif_akhir"/>
+                    <field name="nama_bm"/>
+                    <field name="id_karyawan"/>
+                    <field name="time_stamp"/>
+                    <field name="harga_acuan"/>
+                    <field name="nomor_nppkp"/>
+                    <field name="tgl_pkp"/>
+                    <field name="mata_uang"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

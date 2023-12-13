@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-extend="ListView.buttons" t-name="button_daily_stock_create.buttons">
+        <t t-jquery="button.o_list_export_xlsx" t-operation="before">
+            <button t-if="widget.modelName == 'daily.stock'" type="button" class="btn btn-primary open_daily_stock_action" style="margin-left:2px; margin-right:3px;">
+                Import from API
+            </button>
+            <t t-if="widget.modelName == 'daily.stock'">
+                <t t-raw="widget.progressWidget"/>
+            </t>
+        </t>
+    </t>
+</templates>

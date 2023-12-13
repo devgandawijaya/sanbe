@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="crud_server_env_view_form" model="ir.ui.view">
+            <field name="name">crud.server.env.view.form</field>
+            <field name="model">crud.server.env</field>
+            <field name="arch" type="xml">
+                <form string="Server List">
+                    <sheet>
+                        <group>
+                            <field name="cabang_master_id"/>
+                            <field name="ip"/>
+                            <field name="port"/>
+                            <field name="username"/>
+                            <field name="password"/>
+                            <field name="status"/>
+                            <field name="database_name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="crud_server_env_tree" model="ir.ui.view">
+            <field name="name">crud.server.env.tree</field>
+            <field name="model">crud.server.env</field>
+            <field name="arch" type="xml">
+                <tree string="Server List">
+                    <field name="cabang_master_id"/>
+                    <field name="ip"/>
+                    <field name="port"/>
+                    <field name="username"/>
+                    <field name="password"/>
+                    <field name="status"/>
+                    <field name="database_name"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

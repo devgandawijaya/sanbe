@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-extend="ListView.buttons" t-name="button_product_category_create.buttons">
+        <t t-jquery="button.o_list_export_xlsx" t-operation="after">
+            <button t-if="widget.modelName == 'product.category'" type="button" class="btn btn-primary open_product_category_action">
+                Import Product Category
+            </button>
+        </t>
+    </t>
+</templates>
+
+

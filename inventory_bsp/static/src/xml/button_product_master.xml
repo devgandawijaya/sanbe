@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-extend="KanbanView.buttons" t-name="button_product_master_create.buttons">
+        <t t-jquery="button" t-operation="after">
+            <button t-if="widget.modelName == 'product.template'" type="button" class="btn btn-primary open_product_master_action">
+                Import Product
+            </button>
+        </t>
+    </t>
+</templates>
+
+

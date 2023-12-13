@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="data_replacing_view_form" model="ir.ui.view">
+            <field name="name">data.replacing.view.form</field>
+            <field name="model">data.replacing</field>
+            <field name="arch" type="xml">
+                <form string="BIS Data Replacing" edit="false" create="false">
+                    <header>
+                        <button string="Call Stored Procedure" type="object" name="button_data_replacing" class="btn-primary" attrs="{'invisible': [('kode_cabang', '!=', False)]}"/>
+                    </header>
+                    <sheet>
+                        <group name="first" string="Form isian" attrs="{'invisible': [('kode_cabang', '!=', False)]}">
+                            <field name="vcabang" string="Kode Cabang" readonly="1"/>
+                            <field name="vNamaCabang_id"/>
+                            <field name="vawal"/>
+                            <field name="vakhir"/>
+                            <field name="speriodeawal"/>
+                            <field name="speriodeakhir"/>
+                            <field name="sdivproduk" string="Pilihan"/>
+                            <field name="schoosedivorbrg_ids" widget="many2many_tags" string="Divisi Produk"/>
+                            <field name="sbonus" string="Pilihan Bonus"/>
+                            <field name="sTabSufffix" invisible="1"/>
+                            <field name="delete_after_process" invisible="1"/>
+                            <field name="kode_cabang" invisible="1"/>
+                            <field name="fetch_date" invisible="1"/>
+                            <field name="rb_index" invisible="1"/>
+                        </group>
+
+                        <group name="group_data_code" string="Kode" attrs="{'invisible': [('kode_cabang', '=', False)]}">
+                            <field name="kode_cabang"/>
+                            <field name="kode_barang_id"/>
+                            <field name="kode_divisi_produk_id"/>
+                            <field name="kode_principal"/>
+                            <field name="kode_barang_principal"/>
+                        </group>
+                        <group name="group_data_name" string="Name" attrs="{'invisible': [('nama_cabang_id', '=', False)]}">
+                            <field name="nama_cabang_id"/>
+                            <field name="nama_barang"/>
+                            <field name="partner_id"/>
+                        </group>
+                        <group name="group_data_level" string="Level" attrs="{'invisible': [('ssl_cbg_levelasal', '=', False)]}">
+                            <field name="ssl_cbg_levelasal"/>
+                            <field name="ssl_cbg_levelkecil"/>
+                        </group>
+                        <group name="group_data_harga" string="Harga" attrs="{'invisible': [('harga_beli_terkecil', '=', False)]}">
+                            <field name="harga_beli_terkecil"/>
+                        </group>
+                        <group name="group_data_additional" string="Additional" attrs="{'invisible': [('stock_avail', '=', False)]}">
+                            <field name="stock_avail"/>
+                            <field name="stock_avail_rp"/>
+                            <field name="pending"/>
+                            <field name="pending_rp"/>
+                            <field name="intransit"/>
+                            <field name="intransit_rp"/>
+                            <field name="orderr"/>
+                            <field name="order_rp"/>
+                            <field name="ratio"/>
+                            <field name="sales"/>
+                            <field name="sales_rp"/>
+                            <field name="faktor_pengali"/>
+                            <field name="ssl_fix"/>
+                            <field name="ket_divisi"/>
+                            <field name="flag_ratio"/>
+                            <field name="tgl_berlaku_ssl"/>
+                            <field name="stock_good"/>
+                            <field name="startdate"/>
+                            <field name="enddate"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="data_replacing_tree" model="ir.ui.view">
+            <field name="name">data.replacing.tree</field>
+            <field name="model">data.replacing</field>
+            <field name="arch" type="xml">
+                <tree string="BIS Data Replacing" js_class="button_data_replacing_list" create="false">
+                    <field name="kode_cabang" string="Kode Cabang"/>
+                    <field name="kode_barang_id" string="Kode Barang"/>
+                    <field name="kode_divisi_produk_id" string="Kode Divisi Produk"/>
+                    <field name="kode_principal" string="Kode Vendor"/>
+                    <field name="kode_barang_principal"/>
+                    <field name="nama_cabang_id"/>
+                    <field name="nama_barang"/>
+                    <field name="ssl_cbg_levelasal"/>
+                    <field name="ssl_cbg_levelkecil"/>
+                    <field name="harga_beli_terkecil"/>
+                    <field name="stock_avail"/>
+                    <field name="stock_avail_rp"/>
+                    <field name="pending"/>
+                    <field name="pending_rp"/>
+                    <field name="intransit"/>
+                    <field name="intransit_rp"/>
+                    <field name="orderr"/>
+                    <field name="order_rp"/>
+                    <field name="ratio"/>
+                    <field name="sales"/>
+                    <field name="sales_rp"/>
+                    <field name="faktor_pengali"/>
+                    <field name="ssl_fix"/>
+                    <field name="ket_divisi"/>
+                    <field name="flag_ratio"/>
+                    <field name="tgl_berlaku_ssl"/>
+                    <field name="stock_good"/>
+                    <field name="fetch_date"/>
+                    <field name="startdate"/>
+                    <field name="enddate"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

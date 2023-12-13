@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="product_konversi_form" model="ir.ui.view">
+            <field name="name">product.konversi.form</field>
+            <field name="model">product.konversi</field>
+            <field name="arch" type="xml">
+                <form string="Product Konversi">
+                    <sheet>
+                        <group>
+                            <field name="kode_harga_konversi"/>
+                            <field name="kode_barang_id"/>
+                            <field name="kategori_penjualan_barang"/>
+                            <field name="level"/>
+                            <field name="konversi_satuan"/>
+                            <field name="jual_satuan"/>
+                            <field name="return_satuan"/>
+                            <field name="spreading_satuan"/>
+                            <field name="berat_satuan"/>
+                            <field name="panjang_satuan"/>
+                            <field name="lebar_satuan"/>
+                            <field name="tinggi_satuan"/>
+                            <field name="harga_beli"/>
+                            <field name="harga_tac"/>
+                            <field name="harga_jual"/>
+                            <field name="harga_speading"/>
+                            <field name="kode_cabang_id"/>
+                            <field name="kode_jenis_outlet"/>
+                            <field name="satuan_level"/>
+                            <field name="nama_barang"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="product_konversi_tree" model="ir.ui.view">
+            <field name="name">product.konversi.tree</field>
+            <field name="model">product.konversi</field>
+            <field name="arch" type="xml">
+                <tree string="Product Konversi" js_class="button_product_konversi_list">
+                    <field name="kode_harga_konversi"/>
+                    <field name="kode_barang_id"/>
+                    <field name="kategori_penjualan_barang"/>
+                    <field name="level"/>
+                    <field name="konversi_satuan"/>
+                    <field name="jual_satuan"/>
+                    <field name="return_satuan"/>
+                    <field name="spreading_satuan"/>
+                    <field name="berat_satuan"/>
+                    <field name="panjang_satuan"/>
+                    <field name="lebar_satuan"/>
+                    <field name="tinggi_satuan"/>
+                    <field name="harga_beli"/>
+                    <field name="harga_tac"/>
+                    <field name="harga_jual"/>
+                    <field name="harga_speading"/>
+                    <field name="kode_cabang_id"/>
+                    <field name="kode_jenis_outlet"/>
+                    <field name="satuan_level"/>
+                    <field name="nama_barang"/>
+                </tree>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

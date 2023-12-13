@@ -1,0 +1,17 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_kelompok,Product Kelompok,model_product_kelompok,,1,1,1,1
+access_product_konversi,Product Konversi,model_product_konversi,,1,1,1,1
+access_product_ppn,Product PPN,model_product_ppn,,1,1,1,1
+access_product_divisi,Product Divisi,model_product_divisi,,1,1,1,1
+access_product_barang,Product Barang,model_product_barang,,1,1,1,1
+access_product_registrasi_obat,Product Registrasi Obat,model_product_registrasi_obat,,1,1,1,1
+access_product_ssl,Product SSL,model_product_ssl,,1,1,1,1
+access_product_barang_dinkes,Product Barang Dinkes,model_product_barang_dinkes,,1,1,1,1
+access_cabang_master,Cabang Master,model_cabang_master,,1,1,1,1
+access_cabang_mapping,Cabang Mapping,model_cabang_mapping,,1,1,1,1
+access_wilayah_kecamatan,Wilayah kecamatan,model_wilayah_kecamatan,,1,1,1,1
+access_wilayah_provinsi,Wilayah Provinsi,model_wilayah_provinsi,,1,1,1,1
+access_wilayah_kota,Wilayah Kota/Kabupaten,model_wilayah_kota,,1,1,1,1
+access_wilayah_kelurahan,Wilayah Kelurahan,model_wilayah_kelurahan,,1,1,1,1
+access_transporter_master,Transporter Master,model_transporter_master,,1,1,1,1
+access_report_all_cabang,Report All Cabang,model_report_all_cabang,,1,1,1,1

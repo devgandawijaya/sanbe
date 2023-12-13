@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="wilayah_provinsi_form" model="ir.ui.view">
+            <field name="name">wilayah.provinsi.form</field>
+            <field name="model">wilayah.provinsi</field>
+            <field name="arch" type="xml">
+                <form string="Wilayah provinsi">
+                    <sheet>
+                        <group>
+                            <field name="kode_provinsi"/>
+                            <field name="id_negara"/>
+                            <field name="nama_negara"/>
+                            <field name="nama_provinsi"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="wilayah_provinsi_tree" model="ir.ui.view">
+            <field name="name">wilayah.provinsi.tree</field>
+            <field name="model">wilayah.provinsi</field>
+            <field name="arch" type="xml">
+                <tree string="Wilayah provinsi">
+                    <field name="kode_provinsi"/>
+                    <field name="id_negara"/>
+                    <field name="nama_negara"/>
+                    <field name="nama_provinsi"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

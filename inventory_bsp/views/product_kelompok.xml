@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="product_kelompok_form" model="ir.ui.view">
+            <field name="name">product.kelompok.form</field>
+            <field name="model">product.kelompok</field>
+            <field name="arch" type="xml">
+                <form string="Product kelompok">
+                    <sheet>
+                        <group>
+                            <field name="kode_kelompok_barang"/>
+                            <field name="nama_kelompok_barang"/>
+                            <field name="na_kelompok_barang"/>
+                            <field name="karyawan_id"/>
+                            <field name="time_stamp"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="product_kelompok_tree" model="ir.ui.view">
+            <field name="name">product.kelompok.tree</field>
+            <field name="model">product.kelompok</field>
+            <field name="arch" type="xml">
+                <tree string="Product kelompok">
+                    <field name="kode_kelompok_barang"/>
+                    <field name="nama_kelompok_barang"/>
+                    <field name="na_kelompok_barang"/>
+                    <field name="karyawan_id"/>
+                    <field name="time_stamp"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

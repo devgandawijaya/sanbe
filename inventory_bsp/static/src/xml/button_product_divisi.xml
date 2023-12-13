@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-extend="ListView.buttons" t-name="button_product_divisi_create.buttons">
+        <t t-jquery="button.o_list_export_xlsx" t-operation="after">
+            <button t-if="widget.modelName == 'product.divisi'" type="button" class="btn btn-primary open_product_divisi_action">
+                Import Product Divisi
+            </button>
+        </t>
+    </t>
+</templates>
+
+

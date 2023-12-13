@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="product_registrasi_obat_form" model="ir.ui.view">
+            <field name="name">product.registrasi.obat.form</field>
+            <field name="model">product.registrasi.obat</field>
+            <field name="arch" type="xml">
+                <form string="Product registrasi obat">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="product_registrasi_obat_tree" model="ir.ui.view">
+            <field name="name">product.registrasi.obat.tree</field>
+            <field name="model">product.registrasi.obat</field>
+            <field name="arch" type="xml">
+                <tree string="Product registrasi obat">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

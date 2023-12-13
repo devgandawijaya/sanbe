@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="mrp_bpb_form" model="ir.ui.view">
+            <field name="name">mrp.bpb.form</field>
+            <field name="model">mrp.bpb</field>
+            <field name="arch" type="xml">
+                <form string="MRP BPB" edit="false" create="false">
+                <!-- <header>
+                    <button string="Get Data" name="button_data_bpb" type="object" class="oe_highlight"/>
+                </header> -->
+                    <sheet>
+                        <group name="kode_bpb" string="KODE">
+                            <field name="ISS_NO"/>
+                            <field name="DO_NO"/>
+                            <field name="MO_NO"/>
+                            <field name="po_no"/>
+                            <field name="PRODUCT_CODE"/>
+                            <field name="LOT_NUMBER"/>
+                            <field name="LOCATION_NO"/>
+                            <field name="CUSTOMER_CODE"/>
+                            <field name="exp_no"/>
+                            <field name="resi_number"/>
+                            <field name="delete_after_process" invisible="1"/>
+                            <field name="fetch_date"/>
+                        </group>
+
+                        <group name="tgl_bpb" string="Tanggal">
+                            <field name="ISS_DATE"/>
+                            <field name="expired_date"/>
+                            <field name="exp_date"/>
+                            <field name="actual_date"/>
+                            <field name="loading_date"/>
+                        </group>
+                        <group name="add_bpb" string="additional">
+                            <field name="ISS_STATUS"/>
+                            <field name="MO_TYPE"/>
+                            <field name="PRODUCT_DESC"/>
+                            <field name="prod_unit"/>
+                            <field name="prod_group"/>
+                            <field name="iss_qty"/>
+                            <field name="CUST_NAME"/>
+                            <field name="execdate"/>
+                            <field name="exp_status"/>
+                            <field name="forwarder"/>
+                            <field name="jumlah"/>
+                            <field name="total_vol"/>
+                            <field name="total_weight"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record> 
+
+        <record id="mrp_bpb_tree" model="ir.ui.view">
+            <field name="name">mrp.bpb.tree</field>
+            <field name="model">mrp.bpb</field>
+            <field name="arch" type="xml">
+                <tree string="MRP BPB" create="false" js_class="button_data_bpb_list">
+                    <field name="ISS_NO"/>
+                    <field name="DO_NO"/>
+                    <field name="MO_NO"/>
+                    <field name="po_no"/>
+                    <field name="PRODUCT_CODE"/>
+                    <field name="LOT_NUMBER"/>
+                    <field name="LOCATION_NO"/>
+                    <field name="CUSTOMER_CODE"/>
+                    <field name="exp_no"/>
+                    <field name="resi_number"/>
+                    <field name="delete_after_process" invisible="1"/>
+                    <field name="ISS_DATE"/>
+                    <field name="expired_date"/>
+                    <field name="exp_date"/>
+                    <field name="actual_date"/>
+                    <field name="loading_date"/>
+                    <field name="ISS_STATUS"/>
+                    <field name="MO_TYPE"/>
+                    <field name="PRODUCT_DESC"/>
+                    <field name="prod_unit"/>
+                    <field name="prod_group"/>
+                    <field name="iss_qty"/>
+                    <field name="CUST_NAME"/>
+                    <field name="execdate"/>
+                    <field name="exp_status"/>
+                    <field name="forwarder"/>
+                    <field name="jumlah"/>
+                    <field name="total_vol"/>
+                    <field name="total_weight"/>
+                    <field name="fetch_date"/>
+                    <!-- <field name="total_weight" widget="dropdown_widget"/> -->
+                </tree>
+            </field>
+        </record>  
+        
+    
+    </data>
+    
+</odoo>

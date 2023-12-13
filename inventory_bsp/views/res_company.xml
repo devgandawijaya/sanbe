@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="res_company_form_inherit" model="ir.ui.view">
+            <field name="name">res.company.form.inhrit</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//label[@for='name']" position="attributes">
+                    <attribute name="string">Nama Cabang</attribute>
+                </xpath>
+                <xpath expr="//field[@name='vat']" position="attributes">
+                    <attribute name="string">NPWP Cabang</attribute>
+                </xpath>
+                <xpath expr="//field[@name='vat']" position="after">
+                    <field name="tax_lock_date" string="NPWP Tanggal"/>
+                </xpath>
+                <xpath expr="//field[@name='street']" position="attributes">
+                    <attribute name="placeholder">Alamat...</attribute>
+                </xpath>
+                <xpath expr="//field[@name='street2']" position="attributes">
+                    <attribute name="placeholder">Alamat2...</attribute>
+                </xpath>
+                <xpath expr="//field[@name='city']" position="attributes">
+                    <attribute name="placeholder">Kota/Kabupaten</attribute>
+                </xpath>
+                <xpath expr="//field[@name='state_id']" position="attributes">
+                    <attribute name="placeholder">Provinsi</attribute>
+                </xpath>
+                <xpath expr="//field[@name='country_id']" position="attributes">
+                    <attribute name="placeholder">Negara</attribute>
+                </xpath>
+                <xpath expr="//field[@name='zip']" position="attributes">
+                    <attribute name="placeholder">Kode Pos</attribute>
+                </xpath>
+                <xpath expr="//field[@name='currency_id']" position="attributes">
+                    <attribute name="placeholder">Mata Uang</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='phone']" position="attributes">
+                    <attribute name="string">Nomor Telephone Cabang</attribute>
+                </xpath>
+                <xpath expr="//field[@name='email']" position="attributes">
+                    <attribute name="string">Email Cabang</attribute>
+                </xpath>
+                <xpath expr="//field[@name='email']" position="after">
+                    <field name="fax_cabang"/>
+                </xpath>
+                <xpath expr="//page[@name='general_info']" position="after">
+                    <page name="adds" string="Addsional information">
+                        <group name="addsional">
+                            <field name="kode_cabang"/>
+                            <field name="sk_mentri"/>
+                            <field name="nomor_seri_pajak"/>
+                            <field name="no_izin"/>
+                            <field name="akhir_bulan_berlaku"/>
+                            <field name="penangung_jawab"/>
+                            <field name="sik_aa"/>
+                            <field name="tanggal_berdiri"/>
+                            <field name="nik_kepala_cabang"/>
+                            <field name="no_izin_akses"/>
+                            <field name="penanggung_jawab_alkes"/>
+                            <field name="sik_aa_alkes"/>
+                            <field name="kagud"/>
+                            <field name="karyawan_id"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="res_company_tree_inherit" model="ir.ui.view">
+            <field name="name">res.company.tree.inherit</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="js_class">button_cabang_list</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

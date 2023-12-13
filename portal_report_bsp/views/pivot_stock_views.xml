@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="pivot_stock_form" model="ir.ui.view">
+            <field name="name">pivot.stock.form</field>
+            <field name="model">pivot.stock</field>
+            <field name="arch" type="xml">
+                <form string="Pivot Stock" edit="false" create="false">
+                    <sheet>
+                        <field name="tgl_stock"/>
+                        <field name="kode_cabang"/>
+                        <field name="kode_principal"/>
+                        <field name="Kode_Divisi_Produk_id"/>
+                        <field name="kode_barang"/>
+                        <field name="nama_barang_id"/>
+                        <field name="rev_ssl"/>
+                        <field name="avail_akhir"/>
+                        <field name="ratio"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="pivot_stock_tree" model="ir.ui.view">
+            <field name="name">pivot.stock.tree</field>
+            <field name="model">pivot.stock</field>
+            <field name="arch" type="xml">
+                <tree string="Pivot Stock" create="false" js_class="button_pivot_stock_list">
+                        <field name="tgl_stock"/>
+                        <field name="kode_cabang"/>
+                        <field name="kode_principal"/>
+                        <field name="Kode_Divisi_Produk_id"/>
+                        <field name="kode_barang"/>
+                        <field name="nama_barang_id"/>
+                        <field name="rev_ssl"/>
+                        <field name="avail_akhir"/>
+                        <field name="ratio"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

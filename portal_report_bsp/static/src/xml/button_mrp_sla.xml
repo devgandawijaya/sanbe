@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-extend="ListView.buttons" t-name="button_sla_create.buttons">
+        <t t-jquery="button.o_list_export_xlsx" t-operation="after">
+            <button t-if="widget.modelName == 'mrp.sla'" type="button" class="btn btn-primary open_mrp_sla_action">
+                Import SLA
+            </button>
+        </t>
+    </t>
+</templates>
+
+

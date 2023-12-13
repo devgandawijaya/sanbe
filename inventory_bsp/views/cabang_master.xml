@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="cabang_master_form" model="ir.ui.view">
+            <field name="name">cabang.master.form</field>
+            <field name="model">cabang.master</field>
+            <field name="arch" type="xml">
+                <form string="Cabang Master">
+                    <sheet>
+                        <group>
+                            <field name="kode_cabang"/>
+                            <field name="nama_cabang"/>
+                            <field name="tlp_cabang"/>
+                            <field name="fax_cabang"/>
+                            <field name="email_cabang"/>
+                            <field name="alamat_cabang"/>
+                            <field name="npwp_cabang"/>
+                            <field name="npwp_tanggal"/>
+                            <field name="sk_mentri"/>
+                            <field name="nomor_seri_pajak"/>
+                            <field name="no_izin"/>
+                            <field name="akhir_bulan_berlaku"/>
+                            <field name="penangung_jawab"/>
+                            <field name="sik_aa"/>
+                            <field name="tanggal_berdiri"/>
+                            <field name="kode_provinsi_id"/>
+                            <field name="nik_kepala_cabang"/>
+                            <field name="no_izin_akses"/>
+                            <field name="penanggung_jawab_alkes"/>
+                            <field name="sik_aa_alkes"/>
+                            <field name="kagud"/>
+                            <field name="karyawan_id"/>
+                            <field name="kode_negara"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="cabang_master_tree" model="ir.ui.view">
+            <field name="name">cabang.master.tree</field>
+            <field name="model">cabang.master</field>
+            <field name="arch" type="xml">
+                <tree string="Cabang Master">
+                    <field name="kode_cabang"/>
+                    <field name="nama_cabang"/>
+                    <field name="tlp_cabang"/>
+                    <field name="fax_cabang"/>
+                    <field name="email_cabang"/>
+                    <field name="alamat_cabang"/>
+                    <field name="npwp_cabang"/>
+                    <field name="npwp_tanggal"/>
+                    <field name="sk_mentri"/>
+                    <field name="nomor_seri_pajak"/>
+                    <field name="no_izin"/>
+                    <field name="akhir_bulan_berlaku"/>
+                    <field name="penangung_jawab"/>
+                    <field name="sik_aa"/>
+                    <field name="tanggal_berdiri"/>
+                    <field name="kode_provinsi_id"/>
+                    <field name="nik_kepala_cabang"/>
+                    <field name="no_izin_akses"/>
+                    <field name="penanggung_jawab_alkes"/>
+                    <field name="sik_aa_alkes"/>
+                    <field name="kagud"/>
+                    <field name="karyawan_id"/>
+                    <field name="kode_negara"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    <!-- product -->
+        <record id="stock.menu_product_variant_config_stock" model="ir.ui.menu">
+            <field name="action" ref="stock.product_template_action_product"/>
+        </record>
+        <menuitem id="menu_prd_category"
+            name="Product Category"
+            parent="stock.menu_stock_inventory_control"
+            action="product.product_category_action_form" 
+            sequence="20"/>
+
+        <menuitem id="menu_prd_kelompok"
+            name="Product Kelompok"
+            parent="stock.menu_stock_inventory_control"
+            action="action_redirect_to_import_product_kelompok" 
+            sequence="25"/>
+        
+        <menuitem id="menu_prd_konversi"
+            name="Product Konversi"
+            parent="stock.menu_stock_inventory_control"
+            action="action_product_konversi" 
+            sequence="30"/>
+
+        <menuitem id="menu_prd_ppn"
+            name="Product PPN"
+            parent="stock.menu_stock_inventory_control"
+            action="action_redirect_to_import_product_ppn" 
+            sequence="35"/>
+
+        <menuitem id="menu_prd_divisi"
+            name="Product Divisi"
+            parent="stock.menu_stock_inventory_control"
+            action="action_product_divisi" 
+            sequence="40"/>
+
+        <!-- <menuitem id="menu_prd_barang"
+            name="Product Barang"
+            parent="stock.menu_stock_inventory_control"
+            action="action_product_barang" 
+            sequence="45"/> -->
+        
+        <menuitem id="menu_prd_barang_dinkes"
+            name="Product Barang Dinkes"
+            parent="stock.menu_stock_inventory_control"
+            action="action_redirect_to_import_product_barang_dinkes" 
+            sequence="50"/>
+
+        <menuitem id="menu_prd_registrasi_obat"
+            name="Product Registrasi Obat"
+            parent="stock.menu_stock_inventory_control"
+            action="action_product_registrasi_obat" 
+            sequence="55"/>
+
+        <menuitem id="menu_prd_ssl"
+            name="Product SSL"
+            parent="stock.menu_stock_inventory_control"
+            action="action_product_ssl" 
+            sequence="60"/>
+
+        <!-- cabang -->
+        <menuitem id="menu_res_company"
+            name="Cabang"
+            parent="stock.menu_warehouse_config"
+            action="action_res_company_menu" 
+            sequence="17"/>
+
+        <!-- <menuitem id="menu_cabang_master"
+            name="Cabang"
+            parent="stock.menu_warehouse_config"
+            action="action_cabang_master" 
+            sequence="20"/> -->
+
+        <menuitem id="menu_cabang_mapping"
+            name="Cabang Mapping"
+            parent="stock.menu_warehouse_config"
+            action="action_cabang_mapping" 
+            sequence="25"/>
+
+       
+        <!-- menu wilayah -->
+
+        <menuitem id="menu_wilayah_config" name="Wilayah Management" parent="stock.menu_stock_config_settings" sequence="10"/>
+        
+        <menuitem id="menu_wilayah_provinsi"
+            name="Provinsi"
+            parent="menu_wilayah_config"
+            action="action_redirect_to_import_provinsi" 
+            sequence="1"/>
+
+        <menuitem id="menu_wilayah_kota"
+            name="Kota"
+            parent="menu_wilayah_config"
+            action="action_redirect_to_import_kota" 
+            sequence="5"/>
+
+        <menuitem id="menu_wilayah_kecamatan"
+            name="Kecamatan"
+            parent="menu_wilayah_config"
+            action="action_redirect_to_import_kecamatan" 
+            sequence="10"/>
+        
+        <menuitem id="menu_wilayah_kelurahan"
+            name="kelurahan"
+            parent="menu_wilayah_config"
+            action="action_redirect_to_import_kelurahan" 
+            sequence="15"/>
+
+        <menuitem id="menu_get_all_cabang"
+            name="Menu Get All Cabang"
+            parent="purchase.purchase_report_main"
+            action="action_get_all_cabang" 
+            sequence="20"/>
+
+        <menuitem id="menu_transporter_master"
+            name="Transporter Master"
+            parent="menu_wilayah_config"
+            action="action_transporter_master" 
+            sequence="30"/>
+            
+            
+    </data>
+</odoo>

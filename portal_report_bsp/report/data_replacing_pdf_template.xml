@@ -1,0 +1,87 @@
+<odoo>
+    <record id="action_report_data_replacing_pdf" model="ir.actions.report">
+        <field name="name">Data Replacing Report</field>
+        <field name="model">data.replacing</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">portal_report_bsp.data_replacing_report_pdf</field>
+        <field name="report_file">portal_report_bsp.data_replacing_report_pdf</field>
+        <field name="binding_model_id" ref="model_data_replacing"/>
+    </record>
+    <template id="data_replacing_report_pdf">
+        <t t-name="portal_report_bsp.report_data_replacing_pdf">
+            <t t-call="web.html_container">
+                <div class="page">
+                    <h2>Data Replacing Report</h2>
+                    <table class="table table-sm" style="width:100%;">
+                        <thead>
+                                <tr>
+                                    <th>Kode Cabang</th>
+                                    <th>Nama Cabang</th>
+                                    <th>Kode Barang</th>
+                                    <th>Nama Barang</th>
+                                    <th>Kode Divisi Produk</th>
+                                    <th>Kode Principal</th>
+                                    <th>Kode Barang Principal</th>
+                                    <th>SSL CBG Level Asal</th>
+                                    <th>SSL CBG Level Kecil</th>
+                                    <th>Harga Beli Terkecil</th>
+                                    <th>Stock Avail</th>
+                                    <th>Stock Avail RP</th>
+                                    <th>Pending</th>
+                                    <th>Pending RP</th>
+                                    <th>Intransit</th>
+                                    <th>Intransit RP</th>
+                                    <th>Order</th>
+                                    <th>Order RP</th>
+                                    <th>Ratio</th>
+                                    <th>Sales</th>
+                                    <th>Sales RP</th>
+                                    <th>Faktor Pengali</th>
+                                    <th>SSL Fix</th>
+                                    <th>Ket Divisi</th>
+                                    <th>Flag Ratio</th>
+                                    <th>Tgl Berlaku SSL</th>
+                                    <th>Stock Good</th>
+                                    <th>Fetch Date</th>
+                                </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="docs" t-as="doc">
+                                <tr>
+                                    <td><t t-esc="doc.kode_cabang"/></td>
+                                    <td><t t-esc="doc.nama_cabang_id.nama_cabang"/></td>
+                                    <td><t t-esc="doc.kode_barang_id.default_code"/></td>
+                                    <td><t t-esc="doc.nama_barang"/></td>
+                                    <td><t t-esc="doc.kode_divisi_produk_id.kode_divisi_produk"/></td>
+                                    <td><t t-esc="doc.kode_principal"/></td>
+                                    <td><t t-esc="doc.kode_barang_principal"/></td>
+                                    <td><t t-esc="doc.ssl_cbg_levelasal"/></td>
+                                    <td><t t-esc="doc.ssl_cbg_levelkecil"/></td>
+                                    <td><t t-esc="doc.harga_beli_terkecil"/></td>
+                                    <td><t t-esc="doc.stock_avail"/></td>
+                                    <td><t t-esc="doc.stock_avail_rp"/></td>
+                                    <td><t t-esc="doc.pending"/></td>
+                                    <td><t t-esc="doc.pending_rp"/></td>
+                                    <td><t t-esc="doc.intransit"/></td>
+                                    <td><t t-esc="doc.intransit_rp"/></td>
+                                    <td><t t-esc="doc.orderr"/></td>
+                                    <td><t t-esc="doc.order_rp"/></td>
+                                    <td><t t-esc="doc.ratio"/></td>
+                                    <td><t t-esc="doc.sales"/></td>
+                                    <td><t t-esc="doc.sales_rp"/></td>
+                                    <td><t t-esc="doc.faktor_pengali"/></td>
+                                    <td><t t-esc="doc.ssl_fix"/></td>
+                                    <td><t t-esc="doc.ket_divisi"/></td>
+                                    <td><t t-esc="doc.flag_ratio"/></td>
+                                    <td><t t-esc="doc.tgl_berlaku_ssl"/></td>
+                                    <td><t t-esc="doc.stock_good"/></td>
+                                    <td><t t-esc="doc.fetch_date"/></td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

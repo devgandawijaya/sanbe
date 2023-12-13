@@ -1,0 +1,17 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_data_replacing,Data Replacing,model_data_replacing,,1,1,1,1
+access_data_replacing_choosedivorbrg,Data Replacing Choosedivorbrg,model_data_replacing_choosedivorbrg,,1,1,1,1
+access_data_dasboard,Data Dasboard,model_data_dasboard,,1,1,1,1
+access_crud_server_env,crud server env,model_crud_server_env,,1,1,1,1
+access_barang_datang,Barang Datang,model_barang_datang,,1,1,1,1
+access_barang_datang_schoosedivorbrg,Barang Datang Choosedivorbrg,model_barang_datang_schoosedivorbrg,,1,1,1,1
+access_daily_stock,Daily Stock,model_daily_stock,,1,1,1,1
+access_pivot_sales,Pivot Sales,model_pivot_sales,,1,1,1,1
+access_pivot_stock,Pivot Stock,model_pivot_stock,,1,1,1,1
+access_daily_stock_schoosedivorbrg,Daily Stock Choosedivorbrg,model_daily_stock_schoosedivorbrg,,1,1,1,1
+access_daily_stock_schooseprosesstock,Daily Stock Chooseprosesstock,model_daily_stock_schooseprosesstock,,1,1,1,1
+access_report_rumus_logistik,report rumus logistik,model_report_rumus_logistik,,1,1,1,1
+access_mrp_bpb,MRP BPB,model_mrp_bpb,,1,1,1,1
+access_mrp_sla,MRP SLA,model_mrp_sla,,1,1,1,1
+access_mrp_mo,MRP MO,model_mrp_mo,,1,1,1,1
+access_konsolidasi_master,Konsolidasi Master,model_konsolidasi_master,,1,1,1,1

@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+    <!-- product -->
+        <record id="action_redirect_to_import_product_template" model="ir.actions.server">
+            <field name="name">Redirect to Import Product template</field>
+            <field name="model_id" ref="model_product_template"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                    'type': 'ir.actions.act_url',
+                    'url': '/import/product',
+                    'target': 'self',
+                }
+            </field>
+        </record>
+        <record id="action_res_company_menu" model="ir.actions.act_window">
+            <field name="name">Res Company Menu</field>
+            <field name="res_model">res.company</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- <record id="action_res_company" model="ir.actions.server">
+            <field name="name">Res Company Menu</field>
+            <field name="model_id" ref="model_res_company"/>
+        </record> -->
+
+
+        <record id="action_product_kelompok" model="ir.actions.act_window">
+            <field name="name">Product Kelompok</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.kelompok</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No Product Kelompok
+                </p>
+                <p>
+                    Create new Product Kelompok.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_redirect_to_import_product_kelompok" model="ir.actions.server">
+            <field name="name">Redirect to Import Product kelompok</field>
+            <field name="model_id" ref="model_product_kelompok"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                    'type': 'ir.actions.act_url',
+                    'url': '/import/product/kelompok',
+                    'target': 'self',
+                }
+            </field>
+        </record>
+
+        <record id="action_product_konversi" model="ir.actions.act_window">
+            <field name="name">Product konversi</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.konversi</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No Product konversi
+                </p>
+                <p>
+                    Create new Product konversi.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_redirect_to_import_product_konversi" model="ir.actions.server">
+            <field name="name">Redirect to Import Product konversi</field>
+            <field name="model_id" ref="model_product_konversi"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                    'type': 'ir.actions.act_url',
+                    'url': '/import/product/konversi',
+                    'target': 'self',
+                }
+            </field>
+        </record>
+
+        <record id="action_product_ppn" model="ir.actions.act_window">
+            <field name="name">Product ppn</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.ppn</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No Product ppn
+                </p>
+                <p>
+                    Create new Product ppn.
+                </p>
+            </field>
+        </record>
+        <record id="action_redirect_to_import_product_ppn" model="ir.actions.server">
+            <field name="name">Redirect to Import Product ppn</field>
+            <field name="model_id" ref="model_product_ppn"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                    'type': 'ir.actions.act_url',
+                    'url': '/import/product/ppn',
+                    'target': 'self',
+                }
+            </field>
+        </record>
+
+        <record id="action_product_divisi" model="ir.actions.act_window">
+            <field name="name">Product divisi</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.divisi</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No Product divisi
+                </p>
+                <p>
+                    Create new Product divisi.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_redirect_to_import_product_divisi" model="ir.actions.server">
+            <field name="name">Redirect to Import Product divisi</field>
+            <field name="model_id" ref="model_product_divisi"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                    'type': 'ir.actions.act_url',
+                    'url': '/import/product/divisi',
+                    'target': 'self',
+                }
+            </field>
+        </record>
+
+         <record id="action_product_ssl" model="ir.actions.act_window">
+            <field name="name">Product ssl</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.ssl</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No Product ssl
+                </p>
+                <p>
+                    Create new Product ssl.
+                </p>
+            </field>
+        </record>
+
+         <record id="action_product_registrasi_obat" model="ir.actions.act_window">
+            <field name="name">Product Registrasi Obat</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.registrasi.obat</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No Product Registrasi Obat
+                </p>
+                <p>
+                    Create new Product Registrasi.Obat.
+                </p>
+            </field>
+        </record>
+
+         <record id="action_product_barang" model="ir.actions.act_window">
+            <field name="name">Product barang</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.barang</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No Product barang
+                </p>
+                <p>
+                    Create new Product barang.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_product_barang_dinkes" model="ir.actions.act_window">
+            <field name="name">Product Barang Dinkes</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.barang.dinkes</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No Product Barang Dinkes
+                </p>
+                <p>
+                    Create new Product Barang Dinkes.
+                </p>
+            </field>
+        </record>
+
+
+        <record id="action_redirect_to_import_product_barang_dinkes" model="ir.actions.server">
+            <field name="name">Redirect to Import Product barang dinkes</field>
+            <field name="model_id" ref="model_product_barang_dinkes"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                    'type': 'ir.actions.act_url',
+                    'url': '/import/product/dinkes',
+                    'target': 'self',
+                }
+            </field>
+        </record>
+
+        <!-- cabang -->
+
+        <record id="action_cabang_master" model="ir.actions.act_window">
+            <field name="name">Cabang Master</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">cabang.master</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No Cabang Master
+                </p>
+                <p>
+                    Create new Cabang Master.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_redirect_to_import_cabang_master" model="ir.actions.server">
+            <field name="name">Redirect to Import Cabang Master</field>
+            <field name="model_id" ref="model_cabang_master"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                    'type': 'ir.actions.act_url',
+                    'url': '/import/cabang',
+                    'target': 'self',
+                }
+            </field>
+        </record>
+
+        <record id="action_cabang_mapping" model="ir.actions.act_window">
+            <field name="name">Cabang Mapping</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">cabang.mapping</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No Cabang Mapping
+                </p>
+                <p>
+                    Create new Cabang Mapping.
+                </p>
+            </field>
+        </record>
+
+        <!-- wilaya -->
+
+        <record id="action_wilayah_kecamatan" model="ir.actions.act_window">
+            <field name="name">kecamatan</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">wilayah.kecamatan</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No Wilayah kecamatan
+                </p>
+                <p>
+                    Create new Wilayah kecamatan.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_redirect_to_import_kecamatan" model="ir.actions.server">
+            <field name="name">Redirect to Import kecamatan</field>
+            <field name="model_id" ref="model_wilayah_kecamatan"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                    'type': 'ir.actions.act_url',
+                    'url': '/import/kecamatan',
+                    'target': 'self',
+                }
+            </field>
+        </record>
+
+         <record id="action_transporter_master" model="ir.actions.act_window">
+            <field name="name">Transporter</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">transporter.master</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No Transporter Master
+                </p>
+                <p>
+                    Create new No Transporter.
+                </p>
+            </field>
+        </record>
+
+
+        <record id="action_wilayah_provinsi" model="ir.actions.act_window">
+            <field name="name">Provinsi</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">wilayah.provinsi</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No Wilayah provinsi
+                </p>
+                <p>
+                    Create new Wilayah provinsi.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_redirect_to_import_provinsi" model="ir.actions.server">
+            <field name="name">Redirect to Import Provinsi</field>
+            <field name="model_id" ref="model_wilayah_provinsi"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                    'type': 'ir.actions.act_url',
+                    'url': '/import/provinsi',
+                    'target': 'self',
+                }
+            </field>
+        </record>
+
+        <record id="action_wilayah_kota" model="ir.actions.act_window">
+            <field name="name">Kota</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">wilayah.kota</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No Wilayah kota
+                </p>
+                <p>
+                    Create new Wilayah kota.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_redirect_to_import_kota" model="ir.actions.server">
+            <field name="name">Redirect to Import kota</field>
+            <field name="model_id" ref="model_wilayah_kota"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                    'type': 'ir.actions.act_url',
+                    'url': '/import/kota',
+                    'target': 'self',
+                }
+            </field>
+        </record>
+
+        <record id="action_wilayah_kelurahan" model="ir.actions.act_window">
+            <field name="name">kelurahan</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">wilayah.kelurahan</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No Wilayah kelurahan
+                </p>
+                <p>
+                    Create new Wilayah kelurahan.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_redirect_to_import_kelurahan" model="ir.actions.server">
+            <field name="name">Redirect to Import kelurahan</field>
+            <field name="model_id" ref="model_wilayah_kelurahan"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                    'type': 'ir.actions.act_url',
+                    'url': '/import/kelurahan',
+                    'target': 'self',
+                }
+            </field>
+        </record>
+
+
+        <record id="action_get_all_cabang" model="ir.actions.act_window">
+            <field name="name">Report All Cabang</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">report.all.cabang</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No Get All Cabang
+                </p>
+                <p>
+                    Create Get All Cabang.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

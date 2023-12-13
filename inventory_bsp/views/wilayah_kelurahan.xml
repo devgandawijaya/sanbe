@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="wilayah_kelurahan_form" model="ir.ui.view">
+            <field name="name">wilayah.kelurahan.form</field>
+            <field name="model">wilayah.kelurahan</field>
+            <field name="arch" type="xml">
+                <form string="Wilayah kelurahan">
+                    <sheet>
+                        <group>
+                            <field name="id_kelurahan"/>
+                            <field name="id_kecamatan_id"/>
+                            <field name="nama_kelurahan"/>
+                            <field name="kode_pos"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="wilayah_kelurahan_tree" model="ir.ui.view">
+            <field name="name">wilayah.kelurahan.tree</field>
+            <field name="model">wilayah.kelurahan</field>
+            <field name="arch" type="xml">
+                <tree string="Wilayah kelurahan">
+                    <field name="id_kelurahan"/>
+                    <field name="id_kecamatan_id"/>
+                    <field name="nama_kelurahan"/>
+                    <field name="kode_pos"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

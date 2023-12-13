@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="inherit_product_category_form" model="ir.ui.view">
+            <field name="name">product.category.form.inherit</field>
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="product.product_category_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='logistics']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//group[@name='account_property']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='property_cost_method']/parent::group" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//group[@name='first']" position="after">
+                    <group name="bsp">
+                        <field name="kode_kategori_barang"/>
+                        <field name="karyawan_id"/>
+                        <field name="time_stamp"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="product_category_inherited_tree_view" model="ir.ui.view">
+            <field name="name">product.category.view.tree.inherit</field>
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="product.product_category_list_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="js_class">button_product_category_list</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

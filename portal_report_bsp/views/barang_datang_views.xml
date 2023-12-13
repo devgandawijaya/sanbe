@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- <record id="barang_datang_view_form" model="ir.ui.view">
+            <field name="name">barang.datang.view.form</field>
+            <field name="model">barang.datang</field>
+            <field name="arch" type="xml">
+                <form string="BIS Barang Datang">
+                    <header>
+                        <button string="Call Barang Datang Stored Procedure" type="object" name="button_call_sp_barang_datang" class="btn-primary"/>
+                    </header>
+                    <sheet>
+                        <group name="input_group" string="SQL Stored Procedure Input Form" attrs="{'invisible': [('kode_cabang', '!=', False)]}">
+                            <field name="v_kode_cabang" string="Kode Cabang"/>
+                            <field name="v_nama_cabang_id"/>
+                            <field name="v_date_awal"/>
+                            <field name="v_date_akhir"/>
+                            <field name="s_tab_suffix"/>
+                            <field name="s_choosedivorbrg_ids" widget="many2many_tags" string="Pilihan"/>
+                            <field name="s_bonus" string="Pilihan Bonus"/>
+                            <field name="s_div_produk" string="Divisi Produk"/>
+                            <field name="s_total" string="Total Produk"/>
+                        </group>
+
+                        <group name="code_data_group" string="Code Data" attrs="{'invisible': [('kode_cabang', '=', False)]}">
+                            <field name="kode_cabang"/>
+                            <field name="pcpl_kode"/>
+                            <field name="kode_barang_id"/>
+                            <field name="kode_barang_bis"/>
+                            <field name="kode_divisi_produk_id"/>
+                            <field name="kode_principal"/>
+                        </group>
+
+                        <group name="name_data_group" string="Name Data" attrs="{'invisible': [('nama_cabang_id', '=', False)]}">
+                            <field name="nama_cabang_id"/>
+                            <field name="nama_barang"/>
+                            <field name="partner_id"/>
+                        </group>
+
+                        <group name="price_data_group" string="Price Data" attrs="{'invisible': [('harga_transaksi', '=', False)]}">
+                            <field name="harga_transaksi"/>
+                            <field name="harga_beli_terkecil"/>
+                            <field name="harga_beli_terbesar"/>
+                            <field name="harga_order_terkecil"/>
+                        </group>
+
+                        <group name="numbers_data_group" string="Numbers Data" attrs="{'invisible': [('no_barang_datang', '=', False)]}">
+                            <field name="no_barang_datang"/>
+                            <field name="nopajak"/>
+                            <field name="no_surat_jalan"/>
+                            <field name="no_bpb"/>
+                            <field name="no_spb"/>
+                            <field name="no_do"/>
+                            <field name="no_po"/>
+                            <field name="noitem"/>
+                            <field name="nobatch"/>
+                        </group>
+
+                        <group name="measurement_data_group" string="Unit of Measurement Data" attrs="{'invisible': [('qty_transaksi', '=', False)]}">
+                            <field name="qty_transaksi"/>
+                            <field name="qty_beli_terkecil"/>
+                            <field name="qty_order_terkecil"/>
+                            <field name="qty_besar"/>
+                            <field name="satuan_transaksi"/>
+                            <field name="satuan_beli_terkecil"/>
+                            <field name="satuan_beli_terbesar"/>
+                            <field name="satuan_order_terkecil"/>
+                            <field name="gross"/>
+                            <field name="netto"/>
+                        </group>
+
+                        <group name="date_data_group" string="Date Data" attrs="{'invisible': [('tgl_bd', '=', False)]}">
+                            <field name="tgl_bd"/>
+                            <field name="tgl_po"/>
+                            <field name="tglpajak"/>
+                            <field name="tgl_ed"/>
+                        </group>
+
+                        <group name="additional_data_group" string="Additional Data" attrs="{'invisible': [('topfkt', '=', False)]}">
+                            <field name="topfkt"/>
+                            <field name="jenis_faktur"/>
+                            <field name="jenis_beli"/>
+                            <field name="jenis_mac"/>
+                            <field name="sub_jenis_beli"/>
+                            <field name="ssl_pr"/>
+                            <field name="bonus"/>
+                            <field name="status_terkirim"/>
+                            <field name="status_barang"/>
+                            <field name="flagdepo"/>
+                            <field name="kurir"/>
+                            <field name="status_quo_barang"/>
+                            <field name="catatan"/>
+                            <field name="dosub"/>
+                            <field name="bulando"/>
+                            <field name="cbgitem"/>
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record> -->
+
+        <record id="barang_datang_tree" model="ir.ui.view">
+            <field name="name">barang.datang.tree</field>
+            <field name="model">barang.datang</field>
+            <field name="arch" type="xml">
+                <tree string="Barang Datang" js_class="button_barang_datang_list">
+                    <field name="kode_cabang" string="Kode Cabang"/>
+                    <field name="nama_cabang_id" string="Nama Cabang"/>
+                    <field name="no_barang_datang" string="No Kedatangan"/>
+                    <field name="tgl_po" string="Tanggal Pesan"/>
+                    <field name="tgl_bd" string="Tanggal Datang"/>
+                    <field name="nama_barang" string="Nama Produk"/>
+                    <field name="kode_barang_id" string="Kode Produk"/>
+                    <field name="qty_transaksi" string="Jumlah Transaksi"/>
+                    <field name="cbgitem" string="Cabang Item"/>
+
+                    <field name="no_surat_jalan"/>
+                    <field name="no_bpb"/>
+                    <field name="no_spb"/>
+                    <field name="no_do"/>
+                    <field name="no_po"/>
+                    <field name="tglpajak"/>
+                    <field name="nopajak"/>
+                    <field name="topfkt"/>
+                    <field name="jenis_faktur"/>
+                    <field name="jenis_beli"/>
+                    <field name="jenis_mac"/>
+                    <field name="sub_jenis_beli"/>
+                    <field name="pcpl_kode"/>
+                    <field name="noitem"/>
+                    <field name="kode_barang_bis"/>
+                    <field name="nobatch"/>
+                    <field name="satuan_transaksi"/>
+                    <field name="harga_transaksi"/>
+                    <field name="qty_beli_terkecil"/>
+                    <field name="harga_beli_terkecil"/>
+                    <field name="satuan_beli_terkecil"/>
+                    <field name="ssl_pr"/>
+                    <field name="qty_order_terkecil"/>
+                    <field name="satuan_order_terkecil"/>
+                    <field name="harga_order_terkecil"/>
+                    <field name="qty_besar"/>
+                    <field name="harga_beli_terbesar"/>
+                    <field name="satuan_beli_terbesar"/>
+                    <field name="tgl_ed"/>
+                    <field name="bonus"/>
+                    <field name="gross"/>
+                    <field name="netto"/>
+                    <field name="kode_divisi_produk_id"/>
+                    <field name="kode_principal"/>
+                    <field name="status_terkirim"/>
+                    <field name="status_barang"/>
+                    <field name="flagdepo"/>
+                    <field name="kurir"/>
+                    <field name="status_quo_barang"/>
+                    <field name="catatan"/>
+                    <field name="dosub"/>
+                    <field name="bulando"/>
+                    <field name="tanggal_penarikan_awal"/>
+                    <field name="tanggal_penarikan_akhir"/>
+
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

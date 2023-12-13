@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="mrp_sla_form" model="ir.ui.view">
+            <field name="name">mrp.sla.form</field>
+            <field name="model">mrp.sla</field>
+            <field name="arch" type="xml">
+                <form string="MRP SLA" edit="false" create="false">
+                <!-- <header>
+                    <button string="Get Data" name="button_data_sla" type="object" class="oe_highlight"/>
+                </header> -->
+                    <sheet>
+                        <group name="product_sla" string="Product">
+                            <field name="productOwner"/>
+                            <field name="ProductionUnit"/>
+                            <field name="ProductCode"/>
+                            <field name="ProductName"/>
+                            <field name="ProductCategory"/>
+                            <field name="delete_after_process" invisible="1"/>
+                            <field name="fetch_date" invisible="1"/>
+
+                        </group>
+                        <group name="mo_sla" string="MO">
+                            <field name="MORequest"/>
+                            <field name="MODelivery"/>
+                            <field name="MOPendingQuantity"/>
+                        </group>
+                        <group name="qty_sla" string="Balance QTY">
+                            <field name="WIPBalanceQty"/>
+                            <field name="QuarantinedBalanceQuantity"/>
+                            <field name="QuarantinedHoldBalanceQuantity"/>
+                            <field name="QuarantinedLastLotNo"/>
+                            <field name="ReleasedBalanceQuantity"/>
+                            <field name="ReleasedBalanceHoldQuantity"/>
+                            <field name="ReleasedBalanceAndHoldQuantity"/>
+                            <field name="MonthlyForecastQuantity"/>
+                            <field name="TotalStockQuantity"/>
+                            <field name="ReadyStockQuantity"/>
+                        </group>
+                        <group name="add_sla" string="additional">
+                            <field name="UOMCodeDefault"/>
+                            <field name="ReleasedLastLotNo"/>
+                            <field name="LevelTotalValuemonths"/>
+                            <field name="LevelReadyValuemonths"/>
+                            <field name="PlantGroup"/>
+                            <field name="exeuid"/>
+                            <field name="exetime"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record> 
+
+        <record id="mrp_sla_tree" model="ir.ui.view">
+            <field name="name">mrp.sla.tree</field>
+            <field name="model">mrp.sla</field>
+            <field name="arch" type="xml">
+                <tree string="MRP SLA" create="false" js_class="button_data_sla_list">
+                    <field name="productOwner" string="Product Owner"/>
+                    <field name="ProductionUnit" string="Production Unit"/>
+                    <field name="ProductCode" string="Product Code"/>
+                    <field name="ProductName" string="Product Name"/>
+                    <field name="ProductCategory" string="Product Category"/>
+                    <field name="MonthlyForecastQuantity" string="Monthly Forecast Quantity"/>
+                    <field name="QuarantinedBalanceQuantity" string="Quarantined Balance Quantity"/>
+                    <field name="ReleasedBalanceHoldQuantity" string="Released Balance Hold Quantity"/>
+                    <field name="ReleasedBalanceAndHoldQuantity" string="Released Balance And Hold Quantity"/>
+                    <field name="fetch_date" string="Tanggal Penarikan"/>
+                </tree>
+            </field>
+        </record>  
+        
+    
+    </data>
+    
+</odoo>

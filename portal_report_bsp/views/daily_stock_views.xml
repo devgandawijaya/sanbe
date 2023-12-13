@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- <record id="daily_stock_view_form" model="ir.ui.view">
+            <field name="name">daily.stock.view.form</field>
+            <field name="model">daily.stock</field>
+            <field name="arch" type="xml">
+                <form string="Daily Stock">
+                <header>
+                    <button string="Import Daily Stock" type="object" name="button_call_sp_daily_stock" class="btn-primary"/>
+                </header>
+                    <sheet>
+                        <group name="input_group" string="SQL Stored Procedure Input Form" attrs="{'invisible': [('kode_cabang', '!=', False)]}">
+                            <field name="s_kode_cabang"/>
+                            <field name="s_nama_cabang_id"/>
+                            <field name="s_date_awal"/>
+                            <field name="s_date_akhir"/>
+                            <field name="s_periode_awal"/>
+                            <field name="s_periode_akhir"/>
+                            <field name="s_tab_suffix" invisible="1"/>
+                            <field name="s_div_produk" string="Pilih Divisi Produk"/>
+                            <field name="s_bonus" string="Pilih Bonus"/>
+                            <field name="s_choosedivorbrg_ids" widget="many2many_tags" string="Pilih Divisi"/>
+                            <field name="s_chooseprosesstock_ids" widget="many2many_tags" string="Pilih Proses Stok"/>
+                        </group>
+
+                        <group name="code_data_group" string="Code Data" attrs="{'invisible': [('kode_cabang', '=', False)]}">
+                            <field name="kode_cabang"/>
+                            <field name="kode_barang_id"/>
+                            <field name="kode_barang_principal"/>
+                            <field name="kode_principal"/>
+                            <field name="Kode_Divisi_Produk_id"/>
+                        </group>
+
+                        <group name="name_data_group" string="Name Data" attrs="{'invisible': [('nama_cabang_id', '=', False)]}">
+                            <field name="nama_cabang_id"/>
+                            <field name="nama_barang"/>
+                            <field name="partner_id"/>
+                        </group>
+
+                        <group name="price_data_group" string="Price Data" attrs="{'invisible': [('harga_terkini', '=', False)]}">
+                            <field name="harga_terkini"/>
+                            <field name="harga_terkecil"/>
+                            <field name="harga_terbesar"/>
+                        </group>
+
+                        <group name="additional_data_group" string="Additional Data" attrs="{'invisible': [('qty_awal', '=', False)]}">
+                            <field name="group_barang"/>
+                            <field name="category_barang"/>
+                            <field name="jenis_barang"/>
+                            <field name="qty_satuan"/>
+                            <field name="satuan_terbesar"/>
+                            <field name="qty_satuan_kecil"/>
+                            <field name="satuan_terkecil"/>
+                            <field name="qty_awal"/>
+                            <field name="qty_akhir"/>
+                            <field name="tanggal_penarikan_awal"/>
+                            <field name="tanggal_penarikan_akhir"/>
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record> -->
+
+        <record id="daily_stock_tree" model="ir.ui.view">
+            <field name="name">daily.stock.tree</field>
+            <field name="model">daily.stock</field>
+            <field name="arch" type="xml">
+                <tree string="Daily Stock" js_class="button_daily_stock_list">
+                    <!-- <field name="s_kode_cabang" invisible="1"/>
+                    <field name="s_nama_cabang_id" invisible="1"/>
+                    <field name="s_date_awal" invisible="1"/>
+                    <field name="s_date_akhir" invisible="1"/>
+                    <field name="s_periode_awal" invisible="1"/>
+                    <field name="s_periode_akhir" invisible="1"/>
+                    <field name="s_tab_suffix" invisible="1"/>
+                    <field name="s_div_produk" invisible="1"/>
+                    <field name="s_bonus" invisible="1"/>
+                    <field name="s_choosedivorbrg_ids" widget="many2many_tags" invisible="1"/>
+                    <field name="s_chooseprosesstock_ids" widget="many2many_tags" invisible="1"/> -->
+                    
+                    <!-- <field name="kode_cabang" string="Kode Cabang"/>
+                    <field name="nama_cabang" string="Nama Cabang"/>
+                    <field name="kode_barang_clipper" string="Kode Barang Clipper"/>
+                    <field name="group_barang" string="Grup Barang"/>
+                    <field name="nama_barang" string="Nama Barang"/>
+                    <field name="jenis_barang" string="Jenis Barang"/>
+                    <field name="harga_jual_current" string="Harga Jual"/>
+                    <field name="harga_terkecil" string="Harga Terkecil"/>
+                    <field name="harga_terbesar" string="Harga Terbesar"/>
+                    <field name="subgroup_barang" string="Subgrup Barang"/>
+                    <field name="qty1" string="Jumlah Unit"/>
+                    <field name="qty2" string="Isi Per Unit"/>
+                    <field name="avail_awal" string="Stok Awal"/>
+                    <field name="ag_akhir" string="Stok Akhir"/>
+                    <field name="satuan1" string="Master Satuan"/>
+                    <field name="satuan2" string="Kode Satuan"/>
+
+                    <field name="startdate" string="Tgl Awal"/>
+                    <field name="enddate" string="Tgl Akhir"/>
+                    <field name="fetch_date" string="Tgl Ambil Data"/> -->
+
+                    <field name="kode_cabang"/>
+                    <field name="nama_cabang_id"/>
+                    <field name="kode_barang"/>
+                    <field name="kode_barang_principal"/>
+                    <field name="group_barang"/>
+                    <field name="category_barang"/>
+                    <field name="nama_barang_id"/>
+                    <field name="kode_principal"/>
+                    <field name="Kode_Divisi_Produk_id"/>
+                    <field name="jenis_barang"/>
+                    <field name="harga_terkini"/>
+                    <field name="harga_terkecil"/>
+                    <field name="harga_terbesar"/>
+                    <field name="qty_satuan"/>
+                    <field name="satuan_terbesar"/>
+                    <field name="qty_satuan_kecil"/>
+                    <field name="satuan_terkecil"/>
+                    <field name="qty_awal" invisible="1"/>
+                    <field name="qty_akhir"/>
+                    <field name="tanggal_penarikan_awal"/>
+                    <field name="tanggal_penarikan_akhir"/>
+
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

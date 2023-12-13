@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="action_prinsipal_channel" model="ir.actions.act_window">
+            <field name="name">prinsipal channel</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">prinsipal.channel</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No prinsipal channel
+                </p>
+                <p>
+                    Create new prinsipal channel.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_redirect_to_import_prinsipal_channel" model="ir.actions.server">
+            <field name="name">Redirect to Import Product Channel</field>
+            <field name="model_id" ref="model_prinsipal_channel"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                    'type': 'ir.actions.act_url',
+                    'url': '/import/prinsipal/channel',
+                    'target': 'self',
+                }
+            </field>
+        </record>
+
+        <record id="action_prinsipal_pajak" model="ir.actions.act_window">
+            <field name="name">prinsipal pajak</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">prinsipal.pajak</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No prinsipal pajak
+                </p>
+                <p>
+                    Create new prinsipal pajak.
+                </p>
+            </field>
+        </record>
+        <record id="action_redirect_to_import_prinsipal_pajak" model="ir.actions.server">
+            <field name="name">Redirect to Import Product pajak</field>
+            <field name="model_id" ref="model_prinsipal_pajak"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                    'type': 'ir.actions.act_url',
+                    'url': '/import/prinsipal/pajak',
+                    'target': 'self',
+                }
+            </field>
+        </record>
+
+        <record id="action_prinsipal_rekening" model="ir.actions.act_window">
+            <field name="name">prinsipal rekening</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">prinsipal.rekening</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No prinsipal rekening
+                </p>
+                <p>
+                    Create new prinsipal rekening.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_redirect_to_import_prinsipal_rekening" model="ir.actions.server">
+            <field name="name">Redirect to Import Product rekening</field>
+            <field name="model_id" ref="model_prinsipal_rekening"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                    'type': 'ir.actions.act_url',
+                    'url': '/import/prinsipal/rekening',
+                    'target': 'self',
+                }
+            </field>
+        </record>
+
+        <record id="action_prinsipal_program_diskon_barang" model="ir.actions.act_window">
+            <field name="name">Prinsipal Program Diskon Barang</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">prinsipal.program.diskon.barang</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No Prinsipal Program Diskon Barang
+                </p>
+                <p>
+                    Create new Prinsipal Program Diskon Barang.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="product_ppn_form" model="ir.ui.view">
+            <field name="name">product.ppn.form</field>
+            <field name="model">product.ppn</field>
+            <field name="arch" type="xml">
+                <form string="Product ppn">
+                    <sheet>
+                        <group>
+                            <field name="kode_barang_ppn"/>
+                            <field name="kode_barang_id"/>
+                            <field name="tanggal_mulai_berlaku"/>
+                            <field name="PPN"/>
+                            <field name="bebas_ppn"/>
+                            <field name="tanggal_berakhir_ppn"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="product_ppn_tree" model="ir.ui.view">
+            <field name="name">product.ppn.tree</field>
+            <field name="model">product.ppn</field>
+            <field name="arch" type="xml">
+                <tree string="Product ppn">
+                    <field name="kode_barang_ppn"/>
+                    <field name="kode_barang_id"/>
+                    <field name="tanggal_mulai_berlaku"/>
+                    <field name="PPN"/>
+                    <field name="bebas_ppn"/>
+                    <field name="tanggal_berakhir_ppn"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

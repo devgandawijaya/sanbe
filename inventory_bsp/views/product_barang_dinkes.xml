@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="product_barang_dinkes_form" model="ir.ui.view">
+            <field name="name">product.barang.dinkes.form</field>
+            <field name="model">product.barang.dinkes</field>
+            <field name="arch" type="xml">
+                <form string="Product barang dinkes">
+                    <sheet>
+                        <group>
+                            <field name="kode_barang_dinkes"/>
+                            <field name="nama_barang_dinkes"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="product_barang_dinkes_tree" model="ir.ui.view">
+            <field name="name">product.barang.dinkes.tree</field>
+            <field name="model">product.barang.dinkes</field>
+            <field name="arch" type="xml">
+                <tree string="Product barang dinkes">
+                    <field name="kode_barang_dinkes"/>
+                    <field name="nama_barang_dinkes"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-extend="KanbanView.buttons" t-name="button_res_partner_create.buttons">
+        <t t-jquery="button" t-operation="after">
+            <button t-if="widget.modelName == 'res.partner'" type="button" class="btn btn-primary open_res_partner_action">
+                Import Vendor
+            </button>
+        </t>
+    </t>
+</templates>
+
+

@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="mrp_mo_form" model="ir.ui.view">
+            <field name="name">mrp.mo.form</field>
+            <field name="model">mrp.mo</field>
+            <field name="arch" type="xml">
+                <form string="MRP MO" edit="false" create="false">
+                <!-- <header>
+                    <button string="Get Data" name="button_data_mo" type="object" class="oe_highlight"/>
+                </header> -->
+                    <sheet>
+                        <group name="mo_mrp" string="MO">
+                            <field name="mo_no"/>
+                            <field name="mo_date"/>
+                            <field name="mo_type"/>
+                            <field name="mo_group"/>
+                            <field name="fetch_date"/>
+                            <field name="delete_after_process" invisible="1"/>
+                        </group>
+                        <group name="mo_costummer" string="costumer">
+                            <field name="customer_code"/>
+                            <field name="customer"/>
+                        </group>
+                        <group name="mo_sts" string="status">
+                            <field name="order_status"/>
+                        </group>
+                        <group name="mo_product" string="product">
+                            <field name="product_code"/>
+                            <field name="product_name"/>
+                        </group>
+                        <group name="mo_qty" string="QTY">
+                            <field name="order_qty"/>
+                            <field name="ship_qty"/>
+                            <field name="pending_qty"/>
+                        </group>
+                        <group name="mo_add" string="additional">
+                            <field name="so_no"/>
+                            <field name="notes"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record> 
+
+        <record id="mrp_mo_tree" model="ir.ui.view">
+            <field name="name">mrp.mo.tree</field>
+            <field name="model">mrp.mo</field>
+            <field name="arch" type="xml">
+                <tree string="MRP MO" create="false" js_class="button_data_mo_list">
+                    <field name="mo_no"/>
+                    <field name="mo_date"/>
+                    <field name="mo_type"/>
+                    <field name="mo_group"/>
+                    <field name="customer_code"/>
+                    <field name="customer"/>
+                    <field name="order_status"/>
+                    <field name="product_code"/>
+                    <field name="product_name"/>
+                    <field name="order_qty"/>
+                    <field name="ship_qty"/>
+                    <field name="pending_qty"/>
+                    <field name="so_no"/>
+                    <field name="notes"/>
+                    <field name="fetch_date"/>
+                </tree>
+            </field>
+        </record>  
+        
+    
+    </data>
+    
+</odoo>

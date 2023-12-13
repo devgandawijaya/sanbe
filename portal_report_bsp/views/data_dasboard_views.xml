@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="data_dasboard_view_form" model="ir.ui.view">
+            <field name="name">data.dasboard.view.form</field>
+            <field name="model">data.dasboard</field>
+            <field name="arch" type="xml">
+                <form string="Data Dasboard">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="data_dasboard_tree" model="ir.ui.view">
+            <field name="name">data.dasboard.tree</field>
+            <field name="model">data.dasboard</field>
+            <field name="arch" type="xml">
+                <tree string="Data Dasboard">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

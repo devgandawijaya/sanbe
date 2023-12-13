@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-extend="ListView.buttons" t-name="button_pivot_sale_create.buttons">
+        <t t-jquery="button.o_list_export_xlsx" t-operation="after">
+            <button t-if="widget.modelName == 'pivot.sales'" type="button" class="btn btn-primary open_pivot_sale_action m-2">
+                Import Pivot Sales
+            </button>
+        </t>
+    </t>
+</templates>
+
+

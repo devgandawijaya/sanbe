@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="purchase_order_form_inherit" model="ir.ui.view">
+        <field name="name">purchase.order.form.inherit</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page string="BSP Prinsipal" name="bsp_prinsipal_page">
+                    <group string="Info Prinsipal">
+                        <field name="nama_bm"/>
+                        <field name="harga_acuan"/>
+                        <field name="fax_principal"/>
+                        <field name="npwp_principal"/>
+                        <field name="nomor_nppkp"/>
+                    </group>
+
+                    <group string="Kontak Personal">
+                        <field name="cp_logistik" string="Logistic"/>
+                        <field name="cp_finance" string="Finance"/>
+                        <field name="cp_marketing" string="Marketing"/>
+                    </group>
+
+                    <group string="Tanggal">
+                        <field name="tanggal_bergabung"/>
+                        <field name="tanggal_berhenti"/>
+                        <field name="tgl_pkp"/>
+                    </group>
+
+                    <group string="Ekslusif">
+                        <field name="ekslusif_awal"/>
+                        <field name="ekslusif_akhir"/>
+                    </group>
+
+
+                    <group string="Tambahan">
+                        <field name="percent_pembulat"/>
+                        <field name="jenis_pengembalian"/>
+                        <field name="faktur_ekslusif"/>
+                        <field name="diskon_faktur"/>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+</odoo>

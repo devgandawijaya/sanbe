@@ -1,0 +1,41 @@
+<odoo>
+  <data>
+    <record id="inherit_stock_warehouse_template_form" model="ir.ui.view">
+      <field name="name">stock.warehouse.form.inherit</field>
+      <field name="model">stock.warehouse</field>
+      <field name="inherit_id" ref="stock.view_warehouse"/>
+      <field name="arch" type="xml">
+  
+        <xpath expr="//field[@name='name']" position="attributes">
+          <attribute name="string">Nama Gudang</attribute>
+        </xpath>
+
+        <xpath expr="//field[@name='code']" position="attributes">
+          <attribute name="string">Kode Gudang</attribute>
+        </xpath>
+
+         <xpath expr="//field[@name='company_id']" position="attributes">
+          <attribute name="string">Nama Perusahaan</attribute>
+        </xpath>
+
+        <xpath expr="//field[@name='partner_id']" position="attributes">
+          <attribute name="string">Alamat Gudang</attribute>
+        </xpath>
+
+         <group>
+                <group>
+                    <field name="kode_kabupaten_kota_id" placeholder="Kode Kabupaten/kota"/>
+                    <field name="jumlah_freezer" placeholder="Jumlah Freezer"/>
+                    <field name="jenis_gudang" placeholder="Jenis Gudang"/>
+                </group>
+                <group>
+                    <field name="keterangan_gudang" placeholder="Keterangan Gudang"/>
+                    <field name="kode_cabang_id" placeholder="Kode Gudang"/>
+                    <field name="kategori_gudang" placeholder="Kategori Gudang"/>
+                </group>
+        </group>
+
+      </field>
+    </record>
+  </data>
+</odoo>

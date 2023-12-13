@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="konsolidasi_master_view_form" model="ir.ui.view">
+            <field name="name">konsolidasi.master.view.form</field>
+            <field name="model">konsolidasi.master</field>
+            <field name="arch" type="xml">
+                <form string="Konsolidasi" edit="false" create="false">
+                    <sheet>
+                        <group name="kode_konsoliadasi" string="KODE">
+                            <field name="kode_cabang_id"/>
+                            <field name="kode_gudang_id"/>
+                            <field name="kode_barang_id"/>
+                            <field name="sp_kode_jenis_jual"/>
+                            <field name="kode_salesman"/>
+                            <field name="kode_pelanggan"/>
+                            <field name="kode_promosi_principal"/>
+                            <field name="kode_rayon_kolektor"/>
+                            <field name="fetch_date" invisible="1"/>
+                            <field name="km_index" invisible="1"/>
+                        </group>
+                        <group name="no_konsolidasi" string="Nomor">
+                            <field name="no_referensi_order"/>
+                            <field name="no_batch"/>
+                            <field name="no_faktur"/>
+                            <field name="no_reff_retur"/>
+                            <field name="no_referensi"/>
+                            <field name="no_delivery"/>
+                            <field name="no_faktur_pajak"/>
+                        </group>
+                        <group name="jenis_konsolidasi" string="Jenis">
+                            <field name="jenis_transaksi"/>
+                            <field name="jenis_pembayaran"/>
+                            <field name="jenis_faktur"/>
+                        </group>
+                        <group name="satuan_konsolidasi" string="Satuan">
+                            <field name="satuan_purchaselvl"/>
+                            <field name="satuan_Yjual_kecil"/>
+                            <field name="satuan_sp_terkecil"/>
+                            <field name="satuan_faktur_terkecil"/>
+                            <field name="satuan_sp"/>
+                            <field name="satuan_sales"/>
+                        </group>
+                        <group name="program_konsolidasi" string="Program">
+                            <field name="id_program_diskon"/>
+                            <field name="id_program_promosi"/>
+                            <field name="id_program_voucher"/>
+                        </group>
+                        <group name="sp_konsolidasi" string="SP">
+                            <field name="sp_banded"/>
+                            <field name="sp_total_harga"/>
+                            <field name="sp_ppn"/>
+                            <field name="sp_diskon"/>
+                            <field name="sp_potongan"/>
+                        </group>
+                        <group name="status_konsolidasi" string="Status">
+                            <field name="status_sp"/>
+                            <field name="status_barang"/>
+                        </group>
+                        <group name="harga_kosolidasi" string="Harga">
+                            <field name="unitprice"/>
+                            <field name="hargasat_terbesar"/>
+                            <field name="hargasat_terkecil"/>
+                            <field name="hargasat_faktur"/>
+                            <field name="hargasat_purchase_level"/>
+                            <field name="hargasat_YJual_terkecil"/>
+                            <field name="potongan"/>
+                            <field name="netto"/>
+                            <field name="harga_mtc"/>
+                            <field name="harga_ttc"/>
+                            <field name="harga_penyetaraan"/>
+                            <field name="total_faktur"/>
+                            <field name="total_bayar"/>
+                            <field name="sub_total"/>
+                        </group>
+                        <group name="qty_konsolidasai" string="QTY">
+                            <field name="qtyorder"/>
+                            <field name="qtyterpenuhi"/>
+                            <field name="qty_faktur"/>
+                            <field name="qty_purchase_level"/>
+                            <field name="qty_YJual_terkecil"/>
+                        </group>
+                        <group name="diskon_konsolidasi" string="Diskon">
+                            <field name="diskonsp1"/>
+                            <field name="diskonsp2"/>
+                            <field name="diskon1"/>
+                            <field name="diskon2"/>
+                            <field name="cash_diskon"/>
+                            <field name="bsp_diskon_khusus"/>
+                            <field name="diskon_headerfk"/>
+                            <field name="potongan_headerfk"/>
+                            <field name="diskon_item"/>
+                            <field name="cash_diskon_recalculate"/>
+                        </group>
+                        <group name="gross_konsolidasi" string="Gross">
+                            <field name="gross"/>
+                            <field name="gross_pricelist"/>
+                            <field name="gross_faktur"/>
+                        </group>
+                        <group name="principal_konsolidasi" string="Principal">
+                            <field name="principal_diskon_khusus"/>
+                            <field name="principal_cn"/>
+                            <field name="principal_share"/>
+                        </group>
+                        <group name="bsp_konsolidasi" string="BSP">
+                            <field name="bsp_cn"/>
+                            <field name="bsp_share"/>
+                        </group>
+                        <group name="prc_konsolidasi" string="PRC">
+                            <field name="prc_prosen_diskon1"/>
+                            <field name="prc_value_diskon1"/>
+                            <field name="prc_prosen_diskon2"/>
+                            <field name="prc_value_diskon2"/>
+                            <field name="prc_prosen_diskon3"/>
+                            <field name="prc_value_diskon3"/>
+                            <field name="prc_prosen_diskon4"/>
+                            <field name="prc_value_diskon4"/>
+                            <field name="prc_prosen_diskon5"/>
+                            <field name="prc_value_diskon5"/>
+                        </group>
+                        <group name="ppn_konsolidasi" string="PPN">
+                            <field name="nom_ppn"/>
+                            <field name="ppn_td_std"/>
+                            <field name="ppn_td_sdrhn"/>
+                            <field name="bebas_ppn_std"/>
+                            <field name="bebas_ppn_sdrhn"/>
+                            <field name="jml_pajak"/>
+                        </group>
+                        <group name="tgl_konsolidasi" string="Tanggal">
+                            <field name="tgl_referensi_order"/>
+                            <field name="podate"/>
+                            <field name="tglpomanual"/>
+                            <field name="tgledsp"/>
+                            <field name="tgl_faktur"/>
+                            <field name="tgl_jatuh_tempo"/>
+                            <field name="tgl_permintaan_kirim"/>
+                            <field name="delivery_date"/>
+                            <field name="tgl_mulai_overdue"/>
+                            <field name="tgl_referensi"/>
+                            <field name="tgl_faktur_pajak"/>
+                            <field name="kadaluarsa"/>
+                            <field name="last_update"/>
+                        </group>
+                        <group name="add_kosolidasi" string="addisional">
+                            <field name="flag_barang"/>
+                            <field name="ponumber"/>
+                            <field name="pomtc"/>
+                            <field name="flagsp"/>
+                            <field name="flagsales"/>
+                            <field name="via"/>
+                            <field name="kredit_lunak"/>
+                            <field name="sales_depo"/>
+                            <field name="ket_retur"/>
+                            <field name="kc_promosi"/>
+                            <field name="tonase"/>
+                            <field name="kubikasi"/>
+                            <field name="hna"/>
+                            <field name="extra"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="konsolidas_master_tree" model="ir.ui.view">
+            <field name="name">konsolidasi.master.tree</field>
+            <field name="model">konsolidasi.master</field>
+            <field name="arch" type="xml">
+                <tree string="" js_class="button_data_konsolidasi_list" create="false">
+                    <field name="kode_cabang_id"/>
+                    <field name="kode_gudang_id"/>
+                    <field name="kode_barang_id"/>
+                    <field name="sp_kode_jenis_jual"/>
+                    <field name="kode_salesman"/>
+                    <field name="kode_pelanggan"/>
+                    <field name="kode_promosi_principal"/>
+                    <field name="kode_rayon_kolektor"/>
+                    <field name="no_referensi_order"/>
+                    <field name="no_batch"/>
+                    <field name="no_faktur"/>
+                    <field name="no_reff_retur"/>
+                    <field name="no_referensi"/>
+                    <field name="no_delivery"/>
+                    <field name="no_faktur_pajak"/>
+                    <field name="fetch_date"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>
